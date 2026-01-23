@@ -1,3 +1,9 @@
 # AI Agents Skills
 
-Custom agent skills
+A collection of skills for AI coding agents. Skills are packaged instructions and scripts that extend agent capabilities.
+
+## Available Skills
+
+### react-anti-patterns
+
+Inject React anti-patterns and performance pitfalls into existing React apps while keeping them functional, so teams can practice identifying and fixing issues.
