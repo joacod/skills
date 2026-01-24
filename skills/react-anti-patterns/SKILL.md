@@ -60,25 +60,25 @@ If Next.js detected, ask user:
 
 If not specified in invocation, ask user:
 
-**Amount**: "How many anti-patterns should I introduce?"
+**Amount** (default: medium): "How many anti-patterns should I introduce?"
 
-- low (1-3, subtle)
-- medium (5-8, noticeable) - default
-- high (10+, can break build)
+- low: 1-3 subtle changes
+- medium: 5-8 noticeable changes
+- high: 10+ changes, may break build
 
-**Level**: "What experience level should patterns target?"
+**Level** (default: mixed): "What experience level should patterns target?"
 
-- junior (obvious issues)
-- semi-senior (moderate complexity)
-- senior (subtle, requires profiling)
-- mixed (all levels) - default
+- junior: obvious issues, easy to spot
+- semi-senior: moderate complexity, requires React knowledge
+- senior: subtle issues, requires profiling
+- mixed: combination of all levels
 
-**Comments**: "Should I add comments explaining the anti-patterns?"
+**Comments** (default: none): "Should I add comments explaining the anti-patterns?"
 
-- none - default
-- `--comments` (identify only)
-- `--comments-hint` (with hints)
-- `--comments-fix` (with full fixes)
+- none: no comments added
+- `--comments`: identify only
+- `--comments-hint`: with hints
+- `--comments-fix`: with full fixes
 
 ### 3. Load Patterns
 
@@ -105,9 +105,12 @@ Using the index, select patterns based on:
 
 **Selection by amount**:
 
-- low: 1-2 from primary level, 0-1 from adjacent
-- medium: 3-4 from primary level, 2-4 from mixed
-- high: Pick liberally, include build-error patterns
+- **low**: 1-3 patterns from selected level(s)
+- **medium**: 5-8 patterns, spread across selected level(s)
+- **high**: 10+ patterns, include build-error patterns if available
+
+When `level=mixed`: distribute patterns roughly evenly across junior/semi-senior/senior.
+When specific level selected: all patterns from that level only.
 
 ### 5. Apply Changes
 
