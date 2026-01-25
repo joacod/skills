@@ -30,4 +30,4 @@ npx skills add https://github.com/joacod/skills --skill react-anti-patterns
 /react-anti-patterns --comments medium semi-senior
 ```
 
-For more details, and different parameter options, see the [skill documentation](skills/react-anti-patterns/SKILL.md).
+For more details, and different parameter options, see the [skill documentation](skills/react-anti-patterns/SKILL.md#react-anti-patterns)
