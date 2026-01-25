@@ -31,3 +31,15 @@ npx skills add https://github.com/joacod/skills --skill react-anti-patterns
 ```
 
 For more details, and different parameter options, see the [skill documentation](skills/react-anti-patterns/SKILL.md#react-anti-patterns)
+
+### secure-node-typescript
+
+Write secure-by-default Node.js and TypeScript applications following security best practices. Guidelines mapped to OWASP Top 10:2025 for compliance tracking.
+
+#### Installation
+
+```bash
+npx skills add https://github.com/joacod/skills --skill secure-node-typescript
+```
+
+For more details, see the [skill documentation](skills/secure-node-typescript/SKILL.md)
