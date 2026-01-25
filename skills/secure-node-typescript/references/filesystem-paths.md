@@ -7,7 +7,7 @@ Prevent path traversal attacks and ensure safe file operations.
 ### path-sanitization
 
 - **Severity**: critical
-- **OWASP**: A01 (Broken Access Control), A03 (Injection)
+- **OWASP**: A01 (Broken Access Control), A05 (Injection)
 
 **Risk**: Unsanitized file paths allow attackers to access files outside intended directories using sequences like `../` (path traversal).
 
@@ -317,7 +317,7 @@ const filename = req.params.file // Could be "%2e%2e%2f" (../)
 ### typed-paths
 
 - **Severity**: medium
-- **OWASP**: A04 (Insecure Design)
+- **OWASP**: A06 (Insecure Design)
 
 **Risk**: Untyped path handling can lead to confusion between file paths, URLs, and directory paths, causing incorrect security checks.
 
@@ -416,7 +416,7 @@ function process(input: string) {
 ### safe-regex
 
 - **Severity**: high
-- **OWASP**: A05 (Security Misconfiguration)
+- **OWASP**: A02 (Security Misconfiguration)
 
 **Risk**: Regular expressions with nested quantifiers or overlapping patterns can cause catastrophic backtracking (ReDoS), freezing the event loop.
 
@@ -507,7 +507,7 @@ const regex = new RegExp(userPattern) // ReDoS from malicious pattern!
 ### regex-validation
 
 - **Severity**: medium
-- **OWASP**: A05 (Security Misconfiguration)
+- **OWASP**: A02 (Security Misconfiguration)
 
 **Risk**: User-provided regex patterns can contain malicious patterns that cause ReDoS or unexpected matching behavior.
 

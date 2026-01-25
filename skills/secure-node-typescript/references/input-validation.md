@@ -7,7 +7,7 @@ Validate and sanitize all external input to prevent injection attacks.
 ### schema-validation
 
 - **Severity**: critical
-- **OWASP**: A03 (Injection)
+- **OWASP**: A05 (Injection)
 
 **Risk**: Unvalidated input can contain malicious payloads that exploit application logic or inject code.
 
@@ -64,7 +64,7 @@ app.post('/users', async (req, res) => {
 ### allowlist-validation
 
 - **Severity**: critical
-- **OWASP**: A03 (Injection)
+- **OWASP**: A05 (Injection)
 
 **Risk**: Blocklist (denylist) validation can be bypassed with new attack patterns. Allowlist validation only accepts known-good values.
 
@@ -118,7 +118,7 @@ const query = `SELECT * FROM users ORDER BY ${sortBy}`
 ### sanitize-outputs
 
 - **Severity**: critical
-- **OWASP**: A03 (Injection)
+- **OWASP**: A05 (Injection)
 
 **Risk**: Unsanitized output can execute malicious code in different contexts (HTML, SQL, shell, etc.).
 
@@ -173,7 +173,7 @@ exec(`convert ${filename} -resize 100x100 output.jpg`) // Command injection
 ### body-size-limit
 
 - **Severity**: high
-- **OWASP**: A05 (Security Misconfiguration)
+- **OWASP**: A02 (Security Misconfiguration)
 
 **Risk**: Unlimited request body size allows denial-of-service attacks through memory exhaustion.
 
@@ -222,7 +222,7 @@ app.use(express.json({ limit: '50mb' }))
 ### content-type-check
 
 - **Severity**: medium
-- **OWASP**: A05 (Security Misconfiguration)
+- **OWASP**: A02 (Security Misconfiguration)
 
 **Risk**: Accepting mismatched Content-Type headers can lead to parser confusion attacks and CSRF bypasses.
 
@@ -281,7 +281,7 @@ app.post('/api/data', (req, res) => {
 ### url-validation
 
 - **Severity**: high
-- **OWASP**: A10 (SSRF)
+- **OWASP**: A01 (Broken Access Control - SSRF)
 
 **Risk**: User-supplied URLs can be used to access internal services, cloud metadata endpoints, or sensitive resources (Server-Side Request Forgery).
 
@@ -365,7 +365,7 @@ app.get('/proxy', async (req, res) => {
 ### json-schema-validation
 
 - **Severity**: high
-- **OWASP**: A03 (Injection)
+- **OWASP**: A05 (Injection)
 
 **Risk**: Complex nested payloads can contain unexpected fields that bypass validation or cause prototype pollution.
 

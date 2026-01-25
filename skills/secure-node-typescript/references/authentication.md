@@ -7,7 +7,7 @@ Secure authentication, authorization, sessions, and secrets management.
 ### argon2-hashing
 
 - **Severity**: critical
-- **OWASP**: A02 (Cryptographic Failures), A07 (Authentication Failures)
+- **OWASP**: A04 (Cryptographic Failures), A07 (Identification & Authentication Failures)
 
 **Risk**: Weak password hashing (MD5, SHA1, bcrypt with low cost) allows offline brute-force attacks if the database is compromised.
 
@@ -75,7 +75,7 @@ const hash = await bcrypt.hash(password, 4) // Cost factor too low
 ### secure-cookies
 
 - **Severity**: critical
-- **OWASP**: A07 (Authentication Failures)
+- **OWASP**: A07 (Identification & Authentication Failures)
 
 **Risk**: Insecure cookie settings allow session hijacking through XSS, network interception, or CSRF attacks.
 
@@ -148,7 +148,7 @@ app.use(
 ### jwt-validation
 
 - **Severity**: critical
-- **OWASP**: A07 (Authentication Failures)
+- **OWASP**: A07 (Identification & Authentication Failures)
 
 **Risk**: Improper JWT validation can allow token forgery, algorithm confusion attacks, or use of expired/revoked tokens.
 
@@ -331,7 +331,7 @@ if (user.role === 'admin' || user.role === 'editor') {
 ### mfa-support
 
 - **Severity**: high
-- **OWASP**: A07 (Authentication Failures)
+- **OWASP**: A07 (Identification & Authentication Failures)
 
 **Risk**: Single-factor authentication is vulnerable to credential stuffing, phishing, and password reuse attacks.
 
@@ -407,7 +407,7 @@ app.post('/verify-mfa', async (req, res) => {
 ### env-variables
 
 - **Severity**: critical
-- **OWASP**: A02 (Cryptographic Failures)
+- **OWASP**: A04 (Cryptographic Failures)
 
 **Risk**: Hardcoded secrets in source code can be exposed through version control, logs, or error messages.
 
@@ -470,7 +470,7 @@ console.log('Config:', process.env) // Exposes secrets in logs!
 ### secret-management
 
 - **Severity**: critical
-- **OWASP**: A02 (Cryptographic Failures)
+- **OWASP**: A04 (Cryptographic Failures)
 
 **Risk**: Secrets stored in files or environment variables can be leaked through container images, backups, or process listings.
 
@@ -540,7 +540,7 @@ const config = {
 ### typed-tokens
 
 - **Severity**: medium
-- **OWASP**: A07 (Authentication Failures)
+- **OWASP**: A07 (Identification & Authentication Failures)
 
 **Risk**: Untyped token payloads can lead to incorrect assumptions about token contents, causing authorization bugs.
 

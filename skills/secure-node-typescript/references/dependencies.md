@@ -7,7 +7,7 @@ Secure dependency management and supply chain protection.
 ### pin-versions
 
 - **Severity**: high
-- **OWASP**: A06 (Vulnerable Components), A08 (Data Integrity Failures)
+- **OWASP**: A03 (Software Supply Chain Failures), A08 (Software & Data Integrity Failures)
 
 **Risk**: Unpinned dependencies can auto-update to compromised versions, and version ranges allow supply chain attacks through malicious updates.
 
@@ -88,7 +88,7 @@ npm install --no-package-lock
 ### lockfile-integrity
 
 - **Severity**: high
-- **OWASP**: A08 (Data Integrity Failures)
+- **OWASP**: A08 (Software & Data Integrity Failures)
 
 **Risk**: Corrupted or tampered lockfiles can cause installation of malicious packages. Missing lockfile verification allows supply chain attacks.
 
@@ -165,7 +165,7 @@ npm install  # Runs all postinstall scripts automatically
 ### npm-audit
 
 - **Severity**: high
-- **OWASP**: A06 (Vulnerable Components)
+- **OWASP**: A03 (Software Supply Chain Failures)
 
 **Risk**: Known vulnerabilities in dependencies can be exploited if not detected and patched promptly.
 
@@ -267,7 +267,7 @@ npm ci --ignore-scripts --no-audit
 ### snyk-integration
 
 - **Severity**: high
-- **OWASP**: A06 (Vulnerable Components)
+- **OWASP**: A03 (Software Supply Chain Failures)
 
 **Risk**: npm audit alone may miss vulnerabilities. Snyk and similar tools provide broader coverage and earlier detection.
 
@@ -355,7 +355,7 @@ npm audit  # May miss vulnerabilities that Snyk catches
 ### type-safe-libraries
 
 - **Severity**: medium
-- **OWASP**: A06 (Vulnerable Components)
+- **OWASP**: A03 (Software Supply Chain Failures)
 
 **Risk**: Libraries without TypeScript types lose compile-time safety benefits and may have incorrect type assumptions that lead to runtime errors.
 
@@ -433,7 +433,7 @@ import badLib from 'bad-lib'
 ### no-experimental
 
 - **Severity**: medium
-- **OWASP**: A06 (Vulnerable Components)
+- **OWASP**: A03 (Software Supply Chain Failures)
 
 **Risk**: Experimental Node.js features and unstable APIs may have undiscovered security vulnerabilities, breaking changes, or unexpected behavior.
 

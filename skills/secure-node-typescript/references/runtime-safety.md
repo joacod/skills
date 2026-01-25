@@ -7,7 +7,7 @@ Prevent code injection, prototype pollution, and ensure safe async patterns.
 ### no-eval
 
 - **Severity**: critical
-- **OWASP**: A03 (Injection)
+- **OWASP**: A05 (Injection)
 
 **Risk**: `eval()`, `new Function()`, and dynamic `setTimeout/setInterval` with strings can execute arbitrary code, enabling remote code execution if user input reaches them.
 
@@ -71,7 +71,7 @@ const mod = await import(userInput) // Same issue
 ### safe-child-process
 
 - **Severity**: critical
-- **OWASP**: A03 (Injection)
+- **OWASP**: A05 (Injection)
 
 **Risk**: Using `exec()` or `execSync()` with user input allows command injection. Shell metacharacters can break out and execute arbitrary commands.
 
@@ -155,7 +155,7 @@ spawn('convert', [userInput], { shell: true }) // Shell enabled!
 ### vm-sandboxing
 
 - **Severity**: high
-- **OWASP**: A03 (Injection)
+- **OWASP**: A05 (Injection)
 
 **Risk**: Node.js `vm` module is NOT a security sandbox. Malicious code can escape using prototype chains or constructor access. Only use for untrusted code with extreme caution.
 
@@ -237,7 +237,7 @@ vm.runInContext(code, {
 ### object-freeze
 
 - **Severity**: medium
-- **OWASP**: A03 (Injection)
+- **OWASP**: A05 (Injection)
 
 **Risk**: Mutable objects can be modified through prototype pollution or accidental mutation, leading to security bypasses.
 
@@ -315,7 +315,7 @@ const newConfig = { ...config } // Still mutable!
 ### frozen-intrinsics
 
 - **Severity**: medium
-- **OWASP**: A03 (Injection)
+- **OWASP**: A05 (Injection)
 
 **Risk**: Prototype pollution attacks modify built-in prototypes (Object, Array, etc.) to inject malicious properties or methods that affect all instances.
 
@@ -385,7 +385,7 @@ obj[untrustedKey] = value // Could be "__proto__"
 ### async-await-patterns
 
 - **Severity**: medium
-- **OWASP**: A04 (Insecure Design)
+- **OWASP**: A06 (Insecure Design)
 
 **Risk**: Improper async handling can cause unhandled rejections, race conditions, or resource leaks that lead to denial of service or security bypasses.
 
@@ -484,7 +484,7 @@ async function waitForever() {
 ### event-loop-monitoring
 
 - **Severity**: medium
-- **OWASP**: A05 (Security Misconfiguration)
+- **OWASP**: A02 (Security Misconfiguration)
 
 **Risk**: Event loop blocking or overload can cause denial of service. CPU-intensive operations on the main thread freeze all request handling.
 

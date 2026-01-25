@@ -7,7 +7,7 @@ Secure error handling, structured logging, and monitoring.
 ### global-error-handlers
 
 - **Severity**: high
-- **OWASP**: A05 (Security Misconfiguration)
+- **OWASP**: A02 (Security Misconfiguration), A10 (Mishandling of Exceptional Conditions)
 
 **Risk**: Unhandled exceptions and promise rejections can crash the application, cause resource leaks, or leave the system in an inconsistent state.
 
@@ -107,7 +107,7 @@ process.on('uncaughtException', (error) => {
 ### custom-error-types
 
 - **Severity**: medium
-- **OWASP**: A04 (Insecure Design)
+- **OWASP**: A06 (Insecure Design), A10 (Mishandling of Exceptional Conditions)
 
 **Risk**: Without custom error types, it's difficult to distinguish between different error conditions, leading to incorrect error handling and security bypasses.
 
@@ -232,7 +232,7 @@ res.status(500).json({ error: error.message, stack: error.stack })
 ### structured-logging
 
 - **Severity**: high
-- **OWASP**: A09 (Logging Failures)
+- **OWASP**: A09 (Logging & Monitoring Failures)
 
 **Risk**: Unstructured logs are difficult to search, analyze, and monitor. Missing security events prevent detection of attacks.
 
@@ -357,7 +357,7 @@ async function login(email: string, password: string): Promise<User | null> {
 ### hide-error-details
 
 - **Severity**: high
-- **OWASP**: A05 (Security Misconfiguration)
+- **OWASP**: A02 (Security Misconfiguration)
 
 **Risk**: Detailed error messages expose system internals, file paths, database structure, and technology stack to attackers.
 
@@ -465,7 +465,7 @@ res.status(500).json({
 ### no-sensitive-logging
 
 - **Severity**: critical
-- **OWASP**: A09 (Logging Failures)
+- **OWASP**: A09 (Logging & Monitoring Failures)
 
 **Risk**: Logging sensitive data (passwords, tokens, PII) can lead to credential theft if logs are accessed by attackers or shared for debugging.
 

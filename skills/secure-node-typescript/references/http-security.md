@@ -7,7 +7,7 @@ Secure HTTP headers, rate limiting, and request handling for web endpoints.
 ### helmet-middleware
 
 - **Severity**: high
-- **OWASP**: A05 (Security Misconfiguration)
+- **OWASP**: A02 (Security Misconfiguration)
 
 **Risk**: Missing security headers leave applications vulnerable to XSS, clickjacking, MIME sniffing, and other browser-based attacks.
 
@@ -85,7 +85,7 @@ app.use(
 ### csp-policy
 
 - **Severity**: high
-- **OWASP**: A05 (Security Misconfiguration)
+- **OWASP**: A02 (Security Misconfiguration)
 
 **Risk**: Missing or permissive Content Security Policy allows XSS attacks by permitting execution of injected scripts.
 
@@ -153,7 +153,7 @@ contentSecurityPolicy: {
 ### cors-configuration
 
 - **Severity**: high
-- **OWASP**: A05 (Security Misconfiguration)
+- **OWASP**: A02 (Security Misconfiguration)
 
 **Risk**: Overly permissive CORS allows malicious websites to make authenticated requests on behalf of users.
 
@@ -222,7 +222,7 @@ app.use(cors({ origin: '*', credentials: true })) // Browsers block this, but sh
 ### rate-limiting
 
 - **Severity**: high
-- **OWASP**: A05 (Security Misconfiguration)
+- **OWASP**: A02 (Security Misconfiguration)
 
 **Risk**: Without rate limiting, attackers can perform brute-force attacks, credential stuffing, or denial-of-service.
 
@@ -295,7 +295,7 @@ const limiter = rateLimit({
 ### exponential-backoff
 
 - **Severity**: medium
-- **OWASP**: A07 (Authentication Failures)
+- **OWASP**: A07 (Identification & Authentication Failures)
 
 **Risk**: Fixed delays allow attackers to calculate optimal attack rates. Exponential backoff makes brute-force impractical.
 
@@ -379,7 +379,7 @@ app.post('/login', async (req, res) => {
 ### hpp-middleware
 
 - **Severity**: medium
-- **OWASP**: A03 (Injection)
+- **OWASP**: A05 (Injection)
 
 **Risk**: HTTP Parameter Pollution can bypass validation by sending duplicate parameters, causing the application to use unexpected values.
 
@@ -442,7 +442,7 @@ app.get('/users', (req, res) => {
 ### disable-legacy-headers
 
 - **Severity**: medium
-- **OWASP**: A05 (Security Misconfiguration)
+- **OWASP**: A02 (Security Misconfiguration)
 
 **Risk**: Legacy headers like X-Powered-By reveal technology stack information, aiding reconnaissance. X-XSS-Protection is deprecated and can introduce vulnerabilities.
 
@@ -488,7 +488,7 @@ res.setHeader('X-XSS-Protection', '1; mode=block') // Can introduce vulnerabilit
 ### sri-hashes
 
 - **Severity**: medium
-- **OWASP**: A08 (Data Integrity Failures)
+- **OWASP**: A08 (Software & Data Integrity Failures)
 
 **Risk**: Without Subresource Integrity, compromised CDNs or MITM attacks can serve malicious scripts that execute in users' browsers.
 

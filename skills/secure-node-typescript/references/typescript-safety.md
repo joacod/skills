@@ -7,7 +7,7 @@ Use TypeScript's type system to catch security issues at compile time.
 ### strict-typescript
 
 - **Severity**: high
-- **OWASP**: A04 (Insecure Design)
+- **OWASP**: A06 (Insecure Design)
 
 **Risk**: Disabled strict mode allows implicit any types, null reference errors, and type coercion bugs that can lead to runtime security vulnerabilities.
 
@@ -52,7 +52,7 @@ Use TypeScript's type system to catch security issues at compile time.
 ### no-any-type
 
 - **Severity**: high
-- **OWASP**: A04 (Insecure Design)
+- **OWASP**: A06 (Insecure Design)
 
 **Risk**: The `any` type bypasses all type checking, allowing unsafe operations and defeating TypeScript's security benefits.
 
@@ -141,7 +141,7 @@ class UserService {
 ### readonly-properties
 
 - **Severity**: medium
-- **OWASP**: A04 (Insecure Design)
+- **OWASP**: A06 (Insecure Design)
 
 **Risk**: Mutable properties can be accidentally or maliciously modified, leading to state corruption or security bypasses.
 
@@ -190,7 +190,7 @@ config.permissions.push('admin') // Privilege escalation!
 ### node-protocol-imports
 
 - **Severity**: medium
-- **OWASP**: A06 (Vulnerable Components)
+- **OWASP**: A03 (Software Supply Chain Failures)
 
 **Risk**: Without the `node:` protocol prefix, Node.js built-in modules can be shadowed by malicious npm packages with the same name (typosquatting).
 
@@ -222,7 +222,7 @@ import crypto from 'crypto' // Could be npm package "crypto"!
 ### freeze-globals
 
 - **Severity**: medium
-- **OWASP**: A03 (Injection)
+- **OWASP**: A05 (Injection)
 
 **Risk**: Unfrozen global objects can be modified through prototype pollution attacks, allowing attackers to inject malicious properties.
 
@@ -264,7 +264,7 @@ console.log(user.isAdmin) // true - from polluted prototype!
 ### typed-async-functions
 
 - **Severity**: medium
-- **OWASP**: A04 (Insecure Design)
+- **OWASP**: A06 (Insecure Design)
 
 **Risk**: Untyped async functions can return unexpected types, leading to runtime errors and potential security issues when handling responses.
 
@@ -319,7 +319,7 @@ console.log(user.permissions.admin) // Runtime error!
 ### typed-config
 
 - **Severity**: medium
-- **OWASP**: A05 (Security Misconfiguration)
+- **OWASP**: A02 (Security Misconfiguration)
 
 **Risk**: Untyped configuration objects can contain incorrect values or missing required fields, leading to security misconfigurations.
 

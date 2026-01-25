@@ -9,6 +9,8 @@ description: Write secure-by-default Node.js and TypeScript applications followi
 
 Write secure-by-default Node.js and TypeScript applications that neutralize common server-side threats. This skill provides security guidelines organized by domain, with inline patterns for the most critical controls.
 
+All guidelines are mapped to [OWASP Top 10:2025](https://owasp.org/Top10/) categories for compliance tracking and audit purposes. See `references/security-index.md` for the complete OWASP mapping.
+
 ## Security Tiers
 
 Apply guidelines based on the code context:

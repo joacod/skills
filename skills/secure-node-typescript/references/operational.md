@@ -7,7 +7,7 @@ Linters, CI/CD security, documentation, and threat modeling.
 ### eslint-security
 
 - **Severity**: high
-- **OWASP**: A04 (Insecure Design)
+- **OWASP**: A06 (Insecure Design)
 
 **Risk**: Without security-focused linting, common vulnerabilities slip through code review and reach production.
 
@@ -102,7 +102,7 @@ npm run build --ignore-scripts
 ### static-analysis
 
 - **Severity**: high
-- **OWASP**: A04 (Insecure Design)
+- **OWASP**: A06 (Insecure Design)
 
 **Risk**: Code review alone misses subtle security issues. Static analysis tools catch patterns that humans overlook.
 
@@ -211,7 +211,7 @@ jobs:
 ### pre-commit-hooks
 
 - **Severity**: medium
-- **OWASP**: A04 (Insecure Design)
+- **OWASP**: A06 (Insecure Design)
 
 **Risk**: Without pre-commit checks, developers can commit code with security issues, secrets, or lint violations.
 
@@ -295,7 +295,7 @@ git commit --no-verify  # Skips all hooks
 ### ci-cd-security
 
 - **Severity**: high
-- **OWASP**: A08 (Data Integrity Failures)
+- **OWASP**: A08 (Software & Data Integrity Failures)
 
 **Risk**: Insecure CI/CD pipelines can be exploited to inject malicious code, steal secrets, or compromise production deployments.
 
@@ -417,7 +417,7 @@ jobs:
 ### threat-modeling
 
 - **Severity**: high
-- **OWASP**: A04 (Insecure Design)
+- **OWASP**: A06 (Insecure Design)
 
 **Risk**: Without threat modeling, security controls may miss actual threats while adding complexity for non-existent risks.
 
@@ -494,11 +494,11 @@ Where different trust levels interact:
 
 | Control             | OWASP | Implementation               |
 | ------------------- | ----- | ---------------------------- |
-| Input validation    | A03   | Zod schemas on all endpoints |
+| Input validation    | A05   | Zod schemas on all endpoints |
 | Authentication      | A07   | Argon2 + JWT + session       |
 | Authorization       | A01   | RBAC middleware              |
-| Security headers    | A05   | Helmet middleware            |
-| Dependency security | A06   | npm audit + Snyk             |
+| Security headers    | A02   | Helmet middleware            |
+| Dependency security | A03   | npm audit + Snyk             |
 
 ## Review Schedule
 
@@ -535,7 +535,7 @@ Where different trust levels interact:
 ### tsdoc-comments
 
 - **Severity**: medium
-- **OWASP**: A04 (Insecure Design)
+- **OWASP**: A06 (Insecure Design)
 
 **Risk**: Missing documentation for security-critical code leads to incorrect usage, bypassed controls, and regression when maintaining code.
 
