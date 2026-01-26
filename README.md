@@ -42,4 +42,4 @@ Write secure-by-default Node.js and TypeScript applications following security b
 npx skills add https://github.com/joacod/skills --skill secure-node-typescript
 ```
 
-For more details, see the [skill documentation](skills/secure-node-typescript/SKILL.md)
+For more details, see the [skill documentation](skills/secure-node-typescript/SKILL.md#secure-nodejs-typescript)
