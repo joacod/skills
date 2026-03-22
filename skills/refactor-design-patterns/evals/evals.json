@@ -1,0 +1,71 @@
+{
+  "skill_name": "refactor-design-patterns",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a TypeScript payment module that works, but every new provider adds more if/else branches across checkout, retries, and fee calculation. I want to refactor it without overengineering. Can you review the design and suggest whether a design pattern would help?",
+      "expected_output": "Diagnoses the design pressure, recommends a small set of candidate patterns such as Strategy, explains tradeoffs, and proposes an incremental refactor path without forcing unnecessary abstraction.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Our Python reporting feature has lots of setup code for building export jobs with optional filters, destinations, formatting rules, and notifications. The code is getting messy. Please check whether a creational pattern would improve this design and when it would be too much.",
+      "expected_output": "Evaluates creational options such as Builder or Factory Method, explains why they fit or do not fit, and keeps the recommendation grounded in pragmatic refactoring.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I need help deciding between Adapter, Facade, and Proxy for a legacy integration layer in a Java service. Different APIs expose different shapes, some calls need auth and caching, and the current wrappers are inconsistent. Review the problem and recommend the best direction.",
+      "expected_output": "Compares nearby structural patterns, recommends the best fit for the actual integration pressures, and clarifies what each pattern would change in practice.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "I have a small Node module with one stable implementation and some duplicated formatting logic across two handlers. Someone suggested introducing Strategy or Template Method, but it feels heavy. Can you review whether a design pattern is actually warranted here?",
+      "expected_output": "Explains clearly when no pattern is needed, recommends a simpler refactor such as extraction or boundary cleanup, and avoids pattern overreach.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Our Kotlin order workflow behaves differently in draft, submitted, approved, and cancelled states. The code currently uses status flags and nested when branches, and invalid transitions keep slipping in. I'm not sure whether this wants Strategy or State. Please review the design and recommend the better fit.",
+      "expected_output": "Distinguishes Strategy from State, recommends State when lifecycle transitions drive behavior, and proposes an incremental refactor path grounded in the current design.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "In a Java service, our vendor integration layer has three problems at once: each external API has a different response shape, most callers repeat the same orchestration steps, and some calls need auth checks plus response caching. I need help deciding between Adapter, Facade, and Proxy without flattening everything into one pattern answer.",
+      "expected_output": "Separates translation, simplification, and access-control concerns, compares Adapter, Facade, and Proxy accurately, and recommends the smallest useful combination or primary direction.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "I have a TypeScript notification feature with email, SMS, and push variants. Right now there's an if/else chain, but each branch is only a few lines and the selection could probably just come from a lookup table. Should I introduce Strategy, or is there a simpler language-idiomatic refactor?",
+      "expected_output": "Recognizes the Strategy shape but considers lighter TypeScript options such as function maps or small extractions when full pattern structure would be overkill.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "Our Python export job constructor has started to grow, but it only has a few optional fields and no real ordering rules. People are proposing Builder because they expect more options later. Please review whether Builder is justified now or whether a simpler creational refactor would be better.",
+      "expected_output": "Explains when Builder is premature, compares it with simpler creational options like config objects or helper factories, and grounds the recommendation in present complexity rather than speculation.",
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "In a Java reporting service, callers currently switch on export type and directly construct `PdfExporter`, `CsvExporter`, or `HtmlExporter`. A teammate wants to introduce Builder because the creation code feels messy, but I think the real issue is choosing the right variant without scattering that decision everywhere. Can you review whether this wants Factory Method, Builder, or something simpler?",
+      "expected_output": "Distinguishes variant selection from staged assembly, compares Factory Method with Builder accurately, and recommends the smallest creational refactor that fits the current pressure.",
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "Our React admin workflow has filters, form fields, validation, a preview panel, and submit controls all reacting to each other. Some updates are just notifications, but other flows need one place to coordinate what happens next. I'm unsure whether we need Observer, Mediator, or a mix. Please review the design and recommend the best direction without overcomplicating it.",
+      "expected_output": "Separates event notification from centralized coordination, compares Observer and Mediator clearly, and recommends a pragmatic boundary or combination based on the actual collaboration pressure.",
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "In a Go service, we wrap an API client with logging, retries, metrics, auth checks, and a small response cache. Some teammates call this Decorator, others say Proxy because access policy and caching are part of the wrapper. I want a practical recommendation: which pattern fits better here, and when would the other label make more sense?",
+      "expected_output": "Distinguishes optional behavior layering from access-control or lifecycle concerns, compares Decorator with Proxy accurately, and recommends the best fit for the current wrapper design without getting stuck on terminology.",
+      "files": []
+    }
+  ]
+}
