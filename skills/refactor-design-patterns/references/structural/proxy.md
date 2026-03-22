@@ -41,6 +41,12 @@ Use Proxy when the underlying object should remain behind access rules, lazy loa
 - put one control concern into the proxy
 - migrate callers without changing their expectations
 
+## Decision Notes
+
+- Choose Proxy when the interface should stay essentially the same but access needs guarding, caching, remoting, instrumentation, or lazy initialization.
+- Prefer Decorator when the goal is optional behavior layering rather than control over access or lifecycle.
+- Prefer Adapter when the dependency exposes the wrong interface in the first place.
+
 ## Tradeoffs
 
 ### Pros
@@ -61,9 +67,11 @@ Use Proxy when the underlying object should remain behind access rules, lazy loa
 - Adapter
 - Facade
 
-## AI-Agent Analogy
+## Example
 
-Front a tool with rate limits, permission checks, lazy initialization, or audit logging while preserving the same call interface.
+Before: business code repeats permission checks, cache lookups, and lazy client setup before calling the same remote service.
+
+After: callers use the same service interface, but the proxy centralizes the control logic around the real subject.
 
 ## Language Notes
 

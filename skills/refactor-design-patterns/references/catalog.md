@@ -4,6 +4,7 @@
 
 Use this catalog to route from a concrete design problem to a small set of candidate patterns.
 Start from the pressure in the code, not from pattern names.
+This catalog focuses on the patterns most likely to help with everyday refactoring decisions rather than trying to be a complete textbook survey.
 
 ## Categories
 

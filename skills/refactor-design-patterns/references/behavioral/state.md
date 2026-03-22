@@ -41,6 +41,12 @@ Use State when the same object behaves differently across lifecycle stages and f
 - move one state's behavior behind a dedicated object or module
 - evolve remaining branches only if complexity warrants it
 
+## Decision Notes
+
+- Choose State when lifecycle stages and valid transitions are central to the design problem.
+- Prefer Strategy when the variants are interchangeable choices rather than phases the same object moves through.
+- If there are only a couple of small states and the transition rules are obvious, an enum and switch may stay clearer.
+
 ## Tradeoffs
 
 ### Pros
@@ -61,9 +67,11 @@ Use State when the same object behaves differently across lifecycle stages and f
 - Template Method
 - Memento
 
-## AI-Agent Analogy
+## Example
 
-An agent behaves differently while planning, executing, waiting for tools, or recovering from failure.
+Before: an order object branches on `status` across approve, cancel, and fulfill methods, and invalid transitions are easy to miss.
+
+After: each lifecycle state owns its allowed behavior and transition rules, so invalid moves become harder to express.
 
 ## Language Notes
 

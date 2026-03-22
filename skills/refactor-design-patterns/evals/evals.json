@@ -18,6 +18,36 @@
       "prompt": "I need help deciding between Adapter, Facade, and Proxy for a legacy integration layer in a Java service. Different APIs expose different shapes, some calls need auth and caching, and the current wrappers are inconsistent. Review the problem and recommend the best direction.",
       "expected_output": "Compares nearby structural patterns, recommends the best fit for the actual integration pressures, and clarifies what each pattern would change in practice.",
       "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "I have a small Node module with one stable implementation and some duplicated formatting logic across two handlers. Someone suggested introducing Strategy or Template Method, but it feels heavy. Can you review whether a design pattern is actually warranted here?",
+      "expected_output": "Explains clearly when no pattern is needed, recommends a simpler refactor such as extraction or boundary cleanup, and avoids pattern overreach.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Our Kotlin order workflow behaves differently in draft, submitted, approved, and cancelled states. The code currently uses status flags and nested when branches, and invalid transitions keep slipping in. I'm not sure whether this wants Strategy or State. Please review the design and recommend the better fit.",
+      "expected_output": "Distinguishes Strategy from State, recommends State when lifecycle transitions drive behavior, and proposes an incremental refactor path grounded in the current design.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "In a Java service, our vendor integration layer has three problems at once: each external API has a different response shape, most callers repeat the same orchestration steps, and some calls need auth checks plus response caching. I need help deciding between Adapter, Facade, and Proxy without flattening everything into one pattern answer.",
+      "expected_output": "Separates translation, simplification, and access-control concerns, compares Adapter, Facade, and Proxy accurately, and recommends the smallest useful combination or primary direction.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "I have a TypeScript notification feature with email, SMS, and push variants. Right now there's an if/else chain, but each branch is only a few lines and the selection could probably just come from a lookup table. Should I introduce Strategy, or is there a simpler language-idiomatic refactor?",
+      "expected_output": "Recognizes the Strategy shape but considers lighter TypeScript options such as function maps or small extractions when full pattern structure would be overkill.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "Our Python export job constructor has started to grow, but it only has a few optional fields and no real ordering rules. People are proposing Builder because they expect more options later. Please review whether Builder is justified now or whether a simpler creational refactor would be better.",
+      "expected_output": "Explains when Builder is premature, compares it with simpler creational options like config objects or helper factories, and grounds the recommendation in present complexity rather than speculation.",
+      "files": []
     }
   ]
 }

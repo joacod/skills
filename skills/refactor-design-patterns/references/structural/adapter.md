@@ -41,6 +41,12 @@ Use Adapter when a useful library, service, or legacy module almost fits your de
 - adapt one external dependency to it
 - migrate callers away from provider-specific code
 
+## Decision Notes
+
+- Choose Adapter when the main problem is interface mismatch or repeated translation.
+- Prefer Facade when the subsystem shape is already compatible enough but too noisy or hard to use.
+- Prefer Proxy when the interface should stay the same and the main concern is access control, caching, remoting, or lazy loading.
+
 ## Tradeoffs
 
 ### Pros
@@ -61,9 +67,11 @@ Use Adapter when a useful library, service, or legacy module almost fits your de
 - Proxy
 - Bridge
 
-## AI-Agent Analogy
+## Example
 
-Wrap several tool APIs so the agent sees one consistent interface for search, storage, or execution.
+Before: each caller reshapes vendor-specific payloads and response fields before using them.
+
+After: one adapter translates the vendor API into the application's preferred payment or shipping interface.
 
 ## Language Notes
 

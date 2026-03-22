@@ -1,6 +1,6 @@
 ---
 name: refactor-design-patterns
-description: Review an existing feature, module, or design and decide whether a well-known design pattern would improve it without adding unnecessary abstraction. Use this whenever the user wants to refactor architecture, reduce branching or coupling, clarify responsibilities, compare design patterns, or asks if a pattern like Strategy, State, Adapter, Facade, Observer, Factory Method, or Builder would help. This skill is especially useful when the code already works but feels hard to extend, test, reason about, or evolve.
+description: Review existing code or architecture and decide whether a specific design pattern would improve it without overengineering. Use this whenever the user is asking whether a pattern is justified, comparing nearby patterns like Strategy vs State or Adapter vs Facade vs Proxy, or refactoring code with recurring branching, growing state logic, hard-to-extend construction, or inconsistent wrappers. Do not use this for broad system design unless the core question is pattern fit, refactoring shape, or whether a simpler non-pattern refactor is better.
 ---
 
 # Refactor Design Patterns

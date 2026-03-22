@@ -41,6 +41,12 @@ Use Strategy when the same task can be solved in several meaningful ways and the
 - extract one alternate behavior behind a common seam
 - move remaining variants only if the seam clearly improves the design
 
+## Decision Notes
+
+- Choose Strategy when the caller, configuration, or context selects among interchangeable behaviors.
+- Prefer State instead when behavior changes mainly because the object moves through lifecycle stages and the transitions are part of the problem.
+- In languages with strong function support, a function map or small callable objects may express the same idea with less ceremony.
+
 ## Tradeoffs
 
 ### Pros
@@ -61,9 +67,11 @@ Use Strategy when the same task can be solved in several meaningful ways and the
 - Template Method
 - Command
 
-## AI-Agent Analogy
+## Example
 
-Choose between fast, deep, low-cost, or tool-heavy execution modes without changing the caller.
+Before: one checkout service switches between pricing rules for standard, premium, and partner accounts.
+
+After: each pricing rule lives behind the same calculation seam, and the caller selects the rule without growing the service's branching logic.
 
 ## Language Notes
 

@@ -41,6 +41,12 @@ Use Facade when callers need to perform common tasks but currently must understa
 - wrap one noisy workflow behind a simpler entry point
 - keep escape hatches for advanced use only where needed
 
+## Decision Notes
+
+- Choose Facade when the main problem is that callers must know too many steps or subsystem details.
+- Prefer Adapter when callers need translation from one interface shape to another.
+- Prefer Proxy when callers should keep the same interface but access needs policy, laziness, or caching.
+
 ## Tradeoffs
 
 ### Pros
@@ -61,9 +67,11 @@ Use Facade when callers need to perform common tasks but currently must understa
 - Proxy
 - Mediator
 
-## AI-Agent Analogy
+## Example
 
-Expose a single tool command that coordinates several low-level tools the agent would otherwise need to call in sequence.
+Before: every feature must open a session, fetch configuration, call three subsystem services in order, and handle cleanup.
+
+After: one facade exposes `runReport()` or `syncAccount()` while hiding the orchestration details from most callers.
 
 ## Language Notes
 
