@@ -46,6 +46,7 @@ Use Proxy when the underlying object should remain behind access rules, lazy loa
 - Choose Proxy when the interface should stay essentially the same but access needs guarding, caching, remoting, instrumentation, or lazy initialization.
 - Prefer Decorator when the goal is optional behavior layering rather than control over access or lifecycle.
 - Prefer Adapter when the dependency exposes the wrong interface in the first place.
+- If callers should be unaware that access is being controlled or deferred, Proxy is usually a better fit than Decorator.
 
 ## Tradeoffs
 

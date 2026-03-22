@@ -41,6 +41,12 @@ Use Decorator when behavior needs optional layering such as logging, metrics, ca
 - extract one cross-cutting behavior into a wrapper
 - add more wrappers only when composition remains readable
 
+## Decision Notes
+
+- Choose Decorator when the main goal is to layer optional behavior around the same core capability.
+- Prefer Proxy when the wrapper exists to control access, hide remoting, defer initialization, or enforce policy while preserving the same service boundary.
+- If the language already has an idiomatic middleware or higher-order-function mechanism, use that instead of forcing a class-heavy decorator structure.
+
 ## Tradeoffs
 
 ### Pros
@@ -61,9 +67,11 @@ Use Decorator when behavior needs optional layering such as logging, metrics, ca
 - Facade
 - Composite
 
-## AI-Agent Analogy
+## Example
 
-Wrap a tool executor with logging, caching, permission checks, or retry behavior without changing the core executor.
+Before: search handlers manually add logging, retry, and metrics logic around the same client call in several places.
+
+After: each concern wraps the client as a composable layer, so the core search behavior stays focused and optional concerns can be stacked as needed.
 
 ## Language Notes
 

@@ -41,6 +41,12 @@ Use Builder when constructors or setup functions have too many parameters, optio
 - introduce a builder around the unstable construction path
 - keep direct construction for simple cases if that remains clearer
 
+## Decision Notes
+
+- Choose Builder when the object or workflow is assembled in stages and invalid or incomplete setup is a real risk.
+- Prefer Factory Method when the main question is which variant to create, not how to assemble it.
+- If keyword arguments, config objects, or functional options already make setup readable, keep the lighter option.
+
 ## Tradeoffs
 
 ### Pros
@@ -61,9 +67,11 @@ Use Builder when constructors or setup functions have too many parameters, optio
 - Abstract Factory
 - Prototype
 
-## AI-Agent Analogy
+## Example
 
-Assemble a multi-stage agent run with optional memory, toolsets, validators, and policies in a readable sequence.
+Before: export-job creation sprawls across call sites with optional filters, destination settings, formatting rules, and notification hooks.
+
+After: one builder makes the staged setup explicit and keeps invalid partial configurations harder to construct.
 
 ## Language Notes
 

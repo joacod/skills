@@ -41,6 +41,12 @@ Use Mediator when many objects coordinate with one another and direct dependenci
 - centralize that interaction in a mediator
 - keep domain logic local and move only collaboration rules
 
+## Decision Notes
+
+- Choose Mediator when several collaborators participate in the same workflow and the interaction rules need one clear home.
+- Prefer Observer when components mostly need notification rather than centralized orchestration.
+- Watch for the mediator turning into a god object; it should own collaboration rules, not absorb unrelated domain behavior.
+
 ## Tradeoffs
 
 ### Pros
@@ -61,9 +67,11 @@ Use Mediator when many objects coordinate with one another and direct dependenci
 - Facade
 - Chain of Responsibility
 
-## AI-Agent Analogy
+## Example
 
-A coordinator manages planner, retriever, executor, and validator interactions so those parts stay decoupled.
+Before: form fields, validation rules, submit buttons, and error banners all call each other directly as the UI changes.
+
+After: a coordinator handles who reacts to what and in what order, so the individual components stop depending on one another.
 
 ## Language Notes
 

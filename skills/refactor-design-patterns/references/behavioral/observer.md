@@ -41,6 +41,12 @@ Use Observer when changes in one part of the system should trigger loosely coupl
 - publish one meaningful event
 - move one consumer behind subscription before generalizing
 
+## Decision Notes
+
+- Choose Observer when one subject emits events and multiple consumers should react independently.
+- Prefer Mediator when the core problem is multi-step coordination among peers and one place should own the interaction rules.
+- Be careful when delivery guarantees, strict ordering, or failure handling are central requirements; plain notifications may not be enough on their own.
+
 ## Tradeoffs
 
 ### Pros
@@ -61,9 +67,11 @@ Use Observer when changes in one part of the system should trigger loosely coupl
 - Chain of Responsibility
 - State
 
-## AI-Agent Analogy
+## Example
 
-Notify memory, logging, and monitoring components when a task state changes without hardwiring each dependency.
+Before: after an invoice is paid, the billing service directly calls receipt, analytics, and notification services in sequence.
+
+After: the billing service publishes a payment event and each subscriber reacts without being hardwired into the publisher.
 
 ## Language Notes
 

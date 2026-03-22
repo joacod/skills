@@ -41,6 +41,12 @@ Use Factory Method when creation varies by subtype or context and constructors a
 - hide concrete type decisions behind that boundary
 - move additional callers to the factory only if the seam proves useful
 
+## Decision Notes
+
+- Choose Factory Method when the main problem is deciding which concrete variant to create.
+- Prefer Builder when the hard part is assembling one complex object step by step with optional parts or ordering rules.
+- In dynamic languages, a small factory function may capture the same idea without needing a full textbook class hierarchy.
+
 ## Tradeoffs
 
 ### Pros
@@ -61,9 +67,11 @@ Use Factory Method when creation varies by subtype or context and constructors a
 - Builder
 - Prototype
 
-## AI-Agent Analogy
+## Example
 
-Choose a tool wrapper or executor type based on task kind without forcing every caller to know the concrete implementation.
+Before: several callers switch on report type and directly instantiate `PdfExporter`, `CsvExporter`, or `HtmlExporter`.
+
+After: one creation boundary chooses the exporter variant so callers depend on the export contract rather than concrete classes.
 
 ## Language Notes
 

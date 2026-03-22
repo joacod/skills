@@ -48,6 +48,24 @@
       "prompt": "Our Python export job constructor has started to grow, but it only has a few optional fields and no real ordering rules. People are proposing Builder because they expect more options later. Please review whether Builder is justified now or whether a simpler creational refactor would be better.",
       "expected_output": "Explains when Builder is premature, compares it with simpler creational options like config objects or helper factories, and grounds the recommendation in present complexity rather than speculation.",
       "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "In a Java reporting service, callers currently switch on export type and directly construct `PdfExporter`, `CsvExporter`, or `HtmlExporter`. A teammate wants to introduce Builder because the creation code feels messy, but I think the real issue is choosing the right variant without scattering that decision everywhere. Can you review whether this wants Factory Method, Builder, or something simpler?",
+      "expected_output": "Distinguishes variant selection from staged assembly, compares Factory Method with Builder accurately, and recommends the smallest creational refactor that fits the current pressure.",
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "Our React admin workflow has filters, form fields, validation, a preview panel, and submit controls all reacting to each other. Some updates are just notifications, but other flows need one place to coordinate what happens next. I'm unsure whether we need Observer, Mediator, or a mix. Please review the design and recommend the best direction without overcomplicating it.",
+      "expected_output": "Separates event notification from centralized coordination, compares Observer and Mediator clearly, and recommends a pragmatic boundary or combination based on the actual collaboration pressure.",
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "In a Go service, we wrap an API client with logging, retries, metrics, auth checks, and a small response cache. Some teammates call this Decorator, others say Proxy because access policy and caching are part of the wrapper. I want a practical recommendation: which pattern fits better here, and when would the other label make more sense?",
+      "expected_output": "Distinguishes optional behavior layering from access-control or lifecycle concerns, compares Decorator with Proxy accurately, and recommends the best fit for the current wrapper design without getting stuck on terminology.",
+      "files": []
     }
   ]
 }
