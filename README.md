@@ -41,3 +41,15 @@ npx skills add https://github.com/joacod/skills --skill react-anti-patterns
 ```
 
 For more details, and different parameter options, see the [skill documentation](skills/react-anti-patterns/SKILL.md#react-anti-patterns)
+
+## refactor-design-patterns
+
+Review an existing feature or module and decide whether a well-known design pattern would improve the design without overcomplicating it. Helps agents diagnose design pressure, compare nearby patterns, and suggest incremental refactors grounded in the current code.
+
+### Installation
+
+```bash
+npx skills add https://github.com/joacod/skills --skill refactor-design-patterns
+```
+
+For more details, see the [skill documentation](skills/refactor-design-patterns/SKILL.md#refactor-design-patterns)

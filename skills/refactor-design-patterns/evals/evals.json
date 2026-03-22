@@ -1,0 +1,23 @@
+{
+  "skill_name": "refactor-design-patterns",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a TypeScript payment module that works, but every new provider adds more if/else branches across checkout, retries, and fee calculation. I want to refactor it without overengineering. Can you review the design and suggest whether a design pattern would help?",
+      "expected_output": "Diagnoses the design pressure, recommends a small set of candidate patterns such as Strategy, explains tradeoffs, and proposes an incremental refactor path without forcing unnecessary abstraction.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Our Python reporting feature has lots of setup code for building export jobs with optional filters, destinations, formatting rules, and notifications. The code is getting messy. Please check whether a creational pattern would improve this design and when it would be too much.",
+      "expected_output": "Evaluates creational options such as Builder or Factory Method, explains why they fit or do not fit, and keeps the recommendation grounded in pragmatic refactoring.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I need help deciding between Adapter, Facade, and Proxy for a legacy integration layer in a Java service. Different APIs expose different shapes, some calls need auth and caching, and the current wrappers are inconsistent. Review the problem and recommend the best direction.",
+      "expected_output": "Compares nearby structural patterns, recommends the best fit for the actual integration pressures, and clarifies what each pattern would change in practice.",
+      "files": []
+    }
+  ]
+}
