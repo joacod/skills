@@ -2,19 +2,29 @@
 
 A collection of skills for AI coding agents. Skills are packaged instructions and scripts that extend agent capabilities.
 
-## Available Skills
+## secure-node-typescript
 
-### react-anti-patterns
+Write secure-by-default Node.js and TypeScript applications following security best practices. Guidelines mapped to OWASP Top 10:2025 for compliance tracking.
+
+### Installation
+
+```bash
+npx skills add https://github.com/joacod/skills --skill secure-node-typescript
+```
+
+For more details, see the [skill documentation](skills/secure-node-typescript/SKILL.md#secure-nodejs-typescript)
+
+## react-anti-patterns
 
 Inject React anti-patterns and performance pitfalls into existing React apps while keeping them functional, so teams can practice identifying and fixing issues.
 
-#### Installation
+### Installation
 
 ```bash
 npx skills add https://github.com/joacod/skills --skill react-anti-patterns
 ```
 
-#### Example Invocations
+### Example Invocations
 
 ```bash
 # Defaults (medium, mixed levels, no comments)
@@ -31,15 +41,3 @@ npx skills add https://github.com/joacod/skills --skill react-anti-patterns
 ```
 
 For more details, and different parameter options, see the [skill documentation](skills/react-anti-patterns/SKILL.md#react-anti-patterns)
-
-### secure-node-typescript
-
-Write secure-by-default Node.js and TypeScript applications following security best practices. Guidelines mapped to OWASP Top 10:2025 for compliance tracking.
-
-#### Installation
-
-```bash
-npx skills add https://github.com/joacod/skills --skill secure-node-typescript
-```
-
-For more details, see the [skill documentation](skills/secure-node-typescript/SKILL.md#secure-nodejs-typescript)
