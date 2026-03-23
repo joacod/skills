@@ -1,56 +1,41 @@
-# AI Agents Skills
+# AI Agent Skills
 
-A collection of skills for AI coding agents. Skills are packaged instructions and scripts that extend agent capabilities.
+A growing collection of skills for AI coding agents.
 
-## secure-node-typescript
+## Usage
 
-Write secure-by-default Node.js and TypeScript applications following security best practices. Guidelines mapped to OWASP Top 10:2025 for compliance tracking.
+Install any skill from this repository with:
 
-### Installation
+```bash
+npx skills add https://github.com/joacod/skills --skill <skill-name>
+```
+
+Replace `<skill-name>` with one of the published skills listed above.
+
+## Available Skills
+
+| Skill | Description | Docs |
+|-------|-------------|------|
+| `secure-node-typescript` | Secure-by-default Node.js and TypeScript practices mapped to OWASP Top 10:2025. | [Open](skills/secure-node-typescript/SKILL.md#secure-nodejs-typescript) |
+| `refactor-design-patterns` | Practical guidance for deciding when a design pattern helps and how to refactor incrementally. | [Open](skills/refactor-design-patterns/SKILL.md#refactor-design-patterns) |
+| `react-anti-patterns` | Inject React anti-patterns and performance pitfalls for training, review, and teaching. | [Open](skills/react-anti-patterns/SKILL.md#react-anti-patterns) |
+
+## Quick Install
+
+### `secure-node-typescript`
 
 ```bash
 npx skills add https://github.com/joacod/skills --skill secure-node-typescript
 ```
 
-For more details, see the [skill documentation](skills/secure-node-typescript/SKILL.md#secure-nodejs-typescript)
-
-## refactor-design-patterns
-
-Review an existing feature or module and decide whether a well-known design pattern would improve the design without overcomplicating it. Helps agents diagnose design pressure, compare nearby patterns, and suggest incremental refactors grounded in the current code.
-
-### Installation
+### `refactor-design-patterns`
 
 ```bash
 npx skills add https://github.com/joacod/skills --skill refactor-design-patterns
 ```
 
-For more details, see the [skill documentation](skills/refactor-design-patterns/SKILL.md#refactor-design-patterns)
-
-
-## react-anti-patterns
-
-Inject React anti-patterns and performance pitfalls into existing React apps while keeping them functional, so teams can practice identifying and fixing issues.
-
-### Installation
+### `react-anti-patterns`
 
 ```bash
 npx skills add https://github.com/joacod/skills --skill react-anti-patterns
 ```
-
-### Example Invocations
-
-```bash
-# Defaults (medium, mixed levels, no comments)
-/react-anti-patterns
-
-# Few junior patterns with hints
-/react-anti-patterns --comments-hint low junior
-
-# Many senior patterns with full explanations
-/react-anti-patterns --comments-fix high senior
-
-# Medium amount, semi-senior level, identify comments
-/react-anti-patterns --comments medium semi-senior
-```
-
-For more details, and different parameter options, see the [skill documentation](skills/react-anti-patterns/SKILL.md#react-anti-patterns)
