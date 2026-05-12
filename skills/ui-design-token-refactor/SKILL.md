@@ -1,6 +1,6 @@
 ---
 name: ui-design-token-refactor
-description: improve, refactor, and systematize web ui styling with css design tokens, cascade layers, tailwind theme variables, semantic color/spacing/typography tokens, dark mode, accessibility checks, and maintainable component styling. use this skill whenever the user asks to improve css, redesign a site, clean up stylesheets, migrate hardcoded values to tokens, organize tailwind themes/classes, create or update a design system, add light/dark themes, or make future ui changes easier for agents.
+description: Improve, refactor, review, and systematize web UI styling with CSS design tokens, cascade layers, Tailwind theme variables, semantic color/spacing/typography tokens, dark mode, accessibility checks, and maintainable component styling. Use this skill whenever the user asks to improve CSS, redesign a site, clean up stylesheets, migrate hardcoded values to tokens, organize Tailwind themes/classes, review a PR for design-token or CSS architecture issues, create or update a design system, add light/dark themes, or make future UI changes easier for agents.
 ---
 
 # UI design token refactor
@@ -14,7 +14,7 @@ Use this skill to turn ad hoc CSS or Tailwind styling into a maintainable, token
    - Identify whether the codebase is primarily vanilla CSS, CSS modules, Sass, Tailwind v4, Tailwind v3, or mixed.
 
 2. Run or perform a style audit.
-   - When repository files are available, prefer `python scripts/audit_style_tokens.py <project-root> --output style-token-audit.md` to inventory raw colors, dimensions, typography values, and Tailwind utility patterns.
+   - When repository files are available, prefer the bundled `scripts/audit_style_tokens.py` script to inventory raw colors, dimensions, typography values, and Tailwind utility patterns. Run it from the skill package or by absolute path, for example: `python /path/to/ui-design-token-refactor/scripts/audit_style_tokens.py <project-root> --output style-token-audit.md`.
    - Supplement the script with manual inspection of representative components and global styles.
 
 3. Choose the implementation path.
@@ -73,6 +73,8 @@ When finishing a styling refactor, include:
 ## Remaining design debt
 [Short list of next improvements]
 ```
+
+For audit-only or PR-review tasks, use the audit template in `references/examples.md` instead of implying code was changed.
 
 ## Reference map
 

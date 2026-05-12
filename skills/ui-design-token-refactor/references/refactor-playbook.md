@@ -28,10 +28,11 @@ Use both automated search and manual inspection.
 Run the bundled script when files are available:
 
 ```bash
-python scripts/audit_style_tokens.py . --output style-token-audit.md
+python /path/to/ui-design-token-refactor/scripts/audit_style_tokens.py . --output style-token-audit.md
 ```
 
 The script inventories hardcoded colors, dimensions, font values, shadows, z-index values, Tailwind color utilities, and arbitrary values.
+Use the actual skill package path when invoking it from another repository. The script skips common dependency, build, cache, generated, and minified files, but the report is still a first-pass inventory; inspect samples before turning matches into tokens.
 
 Useful manual searches:
 

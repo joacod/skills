@@ -1,0 +1,23 @@
+{
+  "skill_name": "ui-design-token-refactor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a React app with CSS modules where Button.module.css, Card.module.css, and globals.css all repeat raw hex colors, 12px/16px/24px spacing, box shadows, and inconsistent focus rings. Please refactor the styling into a small CSS custom property token system without changing the visual design, update one component family to use semantic/component tokens, and tell me what validation you ran.",
+      "expected_output": "Adds or proposes a CSS-first token foundation, migrates a focused component family with minimal visual change, preserves interaction states, documents token architecture and validation, and avoids unnecessary dependencies.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Our Tailwind v4 dashboard has lots of classes like bg-white text-gray-900 dark:bg-gray-900 dark:text-white across cards, tables, and buttons. Set up semantic theme utilities so future changes happen through tokens instead of repeated light/dark class pairs, then refactor a representative card/button surface.",
+      "expected_output": "Detects Tailwind v4, uses @theme and @theme inline appropriately, defines semantic runtime tokens for light/dark themes, refactors representative utilities to semantic names, and preserves Tailwind layout/spacing utilities where appropriate.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Please review this PR from a design-token/CSS architecture perspective. I do not want code changes yet. Look for token naming problems, hardcoded values that should or should not become tokens, dark mode duplication, accessibility risks, and what the safest next PR should be.",
+      "expected_output": "Produces an audit/review style report rather than claiming code changes, prioritizes concrete findings with examples, distinguishes token debt from intentional one-offs, covers dark mode and accessibility, and recommends incremental next steps.",
+      "files": []
+    }
+  ]
+}

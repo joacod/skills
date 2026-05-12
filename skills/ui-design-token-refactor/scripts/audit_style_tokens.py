@@ -42,12 +42,17 @@ IGNORE_DIRS = {
     "dist",
     "build",
     "coverage",
+    ".cache",
+    ".parcel-cache",
+    ".vite",
     ".next",
     ".nuxt",
+    ".output",
     ".svelte-kit",
     ".turbo",
     ".vercel",
     "out",
+    "storybook-static",
     "vendor",
 }
 
@@ -56,6 +61,7 @@ IGNORE_FILES = {
     "pnpm-lock.yaml",
     "yarn.lock",
     "bun.lockb",
+    "style-token-audit.md",
 }
 
 PATTERNS = {
@@ -89,6 +95,8 @@ def iter_files(root: Path) -> Iterable[Path]:
         if any(part in IGNORE_DIRS for part in path.parts):
             continue
         if path.name in IGNORE_FILES:
+            continue
+        if ".min." in path.name:
             continue
         if path.suffix.lower() not in STYLE_EXTENSIONS:
             continue
@@ -221,6 +229,11 @@ def main() -> int:
     parser.add_argument("--max-samples", type=int, default=20, help="Maximum sample lines per section")
     args = parser.parse_args()
 
+    if args.max_items < 0:
+        parser.error("--max-items must be non-negative")
+    if args.max_samples < 0:
+        parser.error("--max-samples must be non-negative")
+
     root = args.root.resolve()
     if not root.exists() or not root.is_dir():
         parser.error(f"root must be an existing directory: {root}")
@@ -234,6 +247,7 @@ def main() -> int:
             all_findings[name].extend(findings)
 
     report = build_report(root, all_findings, file_count, args.max_items, args.max_samples)
+    args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(report, encoding="utf-8")
     print(f"wrote {args.output}")
     return 0
