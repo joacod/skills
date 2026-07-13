@@ -1,0 +1,4 @@
+interface:
+  display_name: "Open-Source Project Validator"
+  short_description: "Pressure-test open-source projects for adoption and strategic value."
+  default_prompt: "Use $open-source-project-validator to evaluate this project idea and recommend the smallest meaningful real-world test."
