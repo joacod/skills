@@ -22,7 +22,7 @@ Run this audit privately after drafting. Revise once when any critical check fai
 
 - Does the substitute set include services, internal labor, generic tools, DIY, and doing nothing?
 - For AI, research, advice, content, or idea products, does it include general-purpose AI plus a strong prompt?
-- Is the wedge stated in terms of buyer, trigger, workflow, outcome, channel, trust, or responsibility—not only features?
+- Is the wedge stated in terms of buyer, trigger, workflow, outcome, trust, or responsibility—not only features?
 - Is the crowding classification consistent with the evidence?
 
 ## Business quality
@@ -30,7 +30,7 @@ Run this audit privately after drafting. Revise once when any critical check fai
 - Are recurring and non-recurring revenue separated?
 - Is recurrence supported by a repeated trigger, monitoring need, portfolio buyer, or repeated usage?
 - Are support, onboarding, customization, security, privacy, uptime, and on-call burden considered?
-- Are build, domain, trust, and distribution advantages treated separately?
+- Are build, domain, and trust advantages treated separately?
 
 ## Pivot quality
 

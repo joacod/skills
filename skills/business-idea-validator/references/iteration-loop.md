@@ -24,22 +24,22 @@ Do not let a large volume of weak signals outweigh a small amount of strong beha
 3. Map each observation to the affected claim and decision gate.
 4. Mark whether the evidence supports, contradicts, or fails to test the claim.
 5. Update only the affected gate classifications and confidence.
-6. Determine whether the result reflects the idea, buyer, offer, message, price, channel, timing, or test design.
+6. Determine whether the result reflects the idea, buyer, workflow, offer, price, scope, timing, or test design.
 7. Revise the verdict, strongest version, and next test only where justified.
 
 ## Diagnose failures carefully
 
-Do not invalidate an idea merely because one outreach message or landing page failed. Check:
+Do not invalidate an idea merely because one validation attempt failed. Check:
 
 - Were prospects qualified and close to the trigger?
-- Did outreach reach a buyer or only a user?
+- Did the test involve the buyer, the user, or someone outside the actual decision?
 - Was the offered outcome concrete and valuable?
 - Did the price create a meaningful decision?
 - Was the trust proof sufficient?
 - Did the test deliver the outcome or only describe future software?
 - Was the sample large enough to expose a pattern?
 
-Also do not excuse repeated rejection by endlessly changing copy. When qualified buyers understand the offer and still will not commit, lower the relevant pain, spend, wedge, or reachability gate.
+Also do not excuse repeated rejection by endlessly changing presentation. When qualified buyers understand the offer and still will not commit, lower the relevant pain, spend, buyer clarity, or wedge gate.
 
 ## Update output
 

@@ -23,7 +23,7 @@ ecosystem influence, learning, future commercialization, or another outcome]
 
 EXTRA INFO:
 [skills to demonstrate, target users, strategic audience, time and maintenance
-budget, distribution access, known alternatives, evidence, links, or exclusions]
+budget, known alternatives, evidence, links, or exclusions]
 ```
 
 Preserve the proposed users, problem, workflow, open-source rationale, creator goals, target audience, constraints, evidence, and exclusions. Do not ask for missing optional fields. Infer only what is necessary, label consequential assumptions, and ask a question only when different interpretations would materially change the evaluation.
@@ -33,12 +33,12 @@ Preserve the proposed users, problem, workflow, open-source rationale, creator g
 1. **Choose the mode and define success.** Read [workflow.md](references/workflow.md). Select `Evaluate`, `Compare`, `Explore`, or `Update`. Establish one primary success objective and a measurable success contract before judging the project.
 2. **Frame the project.** Identify the target user, trigger or workflow, current alternative, concrete utility, why open source helps, strategic audience, and creator constraints.
 3. **Build the evidence ledger.** Read [evidence-standards.md](references/evidence-standards.md). Separate facts, inferences, assumptions, and unknowns. Distinguish showcase quality, attention, adoption, reliance, contribution, and concrete opportunities.
-4. **Investigate by decision value.** Research representative open-source and commercial alternatives, ecosystem behavior, adoption paths, technical trust requirements, maintenance burden, and claims most capable of changing the verdict.
+4. **Investigate by decision value.** Research representative open-source and commercial alternatives, ecosystem behavior, adoption friction, technical trust requirements, maintenance burden, and claims most capable of changing the verdict.
 5. **Judge the project.** Read [decision-framework.md](references/decision-framework.md). Rate all seven gates as `STRONG`, `MIXED`, `WEAK`, or `UNKNOWN`. Do not average away a fatal flaw or use stars as a substitute for utility.
-6. **Design stronger positions.** Create up to four versions including the original. Make every alternative repair a named weak or unknown gate by changing no more than two variables such as user, workflow, scope, integration, distribution surface, governance, or success objective.
+6. **Design stronger positions.** Create up to four versions including the original. Make every alternative repair a named weak or unknown gate by changing no more than two variables such as user, workflow, scope, integration, setup model, governance, or success objective.
 7. **Design the evidence-producing test.** Read [validation-experiments.md](references/validation-experiments.md). Test the most dangerous assumption with real installation, workflow completion, repeat use, integration, contribution, case-study permission, or a concrete opportunity attributable to the project.
 8. **Synthesize one compact answer.** Read and follow [output-contract.md](references/output-contract.md). Keep future monetization as optionality rather than treating it as validated by open-source evidence.
-9. **Review and revise once.** Privately apply [quality-control.md](references/quality-control.md). Correct vanity-metric reasoning, unsupported adoption claims, premature polish, unsustainable maintenance, and vague distribution advice before answering.
+9. **Review and revise once.** Privately apply [quality-control.md](references/quality-control.md). Correct vanity-metric reasoning, unsupported adoption claims, premature polish, unsustainable maintenance, and unnecessary launch advice before answering.
 
 ## Use research proportionally
 
@@ -57,7 +57,6 @@ When browsing is unavailable or prohibited, provide a provisional assessment, ma
 - Require the user to receive standalone utility; a public codebase is not valuable merely because it is public.
 - Treat developer experience, documentation, tests, types, examples, local setup, and architecture as credibility and adoption signals, not automatic moats.
 - Prefer production use, repeat use, integrations, meaningful issues, contributions, and attributable opportunities over stars or launch traffic.
-- Treat building in public as one distribution tactic, not a universal strategy or evidence of adoption.
 - Evaluate the normal maintainer experience after launch, including support, compatibility, security, governance, and abandonment risk.
 - Keep learning value separate from external proof. A project may be worthwhile for learning while remaining weak as a portfolio or adoption bet.
 - State `insufficient evidence` instead of manufacturing certainty.
@@ -66,7 +65,9 @@ When browsing is unavailable or prohibited, provide a provisional assessment, ma
 
 Do not produce a full technical architecture, implementation plan, launch calendar, content strategy, contributor handbook, governance system, or monetization plan unless the user explicitly asks for that separate artifact.
 
-Do not invent users, production deployments, testimonials, contributors, partnerships, employer interest, distribution advantages, download retention, or future revenue.
+Do not evaluate audience building, community promotion, launch tactics, outreach, content marketing, or distribution strategy, and do not downgrade an otherwise strong project merely because the creator lacks an existing audience. Distribution is a separate problem. Mention it only when the project structurally depends on network effects, ecosystem placement, or exceptional visibility, and keep that note to a concise risk rather than a plan or gate.
+
+Do not invent users, production deployments, testimonials, contributors, partnerships, employer interest, download retention, or future revenue.
 
 Keep the verdict scoped to open-source strategic value. When the user also mentions revenue, assess only whether project evidence creates plausible future options; do not imply that adoption validates a revenue model.
 

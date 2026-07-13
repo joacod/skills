@@ -36,11 +36,10 @@ Investigate:
 - Consequences of being late, wrong, incomplete, or inactive.
 - Existing labor, fees, lost revenue, penalties, risk, and opportunity cost.
 - What the buyer has already tried and why change would happen now.
-- A credible source of the first 20 prospects.
 
 Separate problem severity from frequency, complaints from purchase behavior, and access to users from access to budget owners.
 
-Downgrade when the buyer or trigger is vague, the pain is mainly aspirational, the workflow is rare without a repeat or portfolio buyer, every customer requires bespoke delivery, or qualified buyers are not realistically reachable.
+Downgrade when the buyer or trigger is vague, the pain is mainly aspirational, the workflow is rare without a repeat or portfolio buyer, or every customer requires bespoke delivery.
 
 ## 3. Baseline: competition and wedge
 
@@ -55,13 +54,13 @@ Map the real alternatives:
 - General-purpose AI plus a strong prompt when relevant.
 - Doing nothing.
 
-Compare alternatives by exact buyer, trigger, workflow stage owned, outcome, price, time to value, distribution, trust, onboarding, switching burden, responsibility, and recourse. Do not compare only feature lists.
+Compare alternatives by exact buyer, trigger, workflow stage owned, outcome, price, time to value, trust, onboarding, switching burden, responsibility, and recourse. Do not compare only feature lists.
 
 Require a one-sentence wedge:
 
 > This exact buyer chooses this offer at this trigger because [specific advantage over the best current alternative].
 
-A credible wedge usually changes buyer, trigger, workflow ownership, outcome, setup speed, price structure, channel, trust, responsibility, geography, or local knowledge.
+A credible wedge usually changes buyer, trigger, workflow ownership, outcome, setup speed, price structure, trust, responsibility, geography, or local knowledge.
 
 Do not accept "better UX," "uses AI," "all in one," "personalized," or "cheaper" without evidence and a durable mechanism. Treat no competition as ambiguous, not positive. Treat crowded markets as evidence of spending only when a credible wedge remains.
 
@@ -74,8 +73,6 @@ Separate founder fit into:
 1. **Build advantage:** Ability to create and maintain the product.
 2. **Domain advantage:** Knowledge of the workflow, exceptions, language, and buying context.
 3. **Trust advantage:** Credibility that lets the buyer delegate an important outcome.
-4. **Distribution advantage:** Practical access to relevant users and budget owners.
-
 Do not infer one advantage from another.
 
 Investigate:
@@ -88,12 +85,12 @@ Investigate:
 - Sales cycle, trust proof, procurement, and likely objections.
 - Onboarding, customization, support, security, privacy, uptime, and on-call burden.
 - Platform, API, capital, insurance, licensing, and third-party dependencies.
-- First-customer profile, source of 20 prospects, smallest paid offer, and path to a budget owner.
+- First-customer profile, smallest paid offer, and the distinction between user and budget owner.
 - The normal owner experience at 10 customers and at a worthwhile income level.
 
 Do not force subscription revenue onto episodic work. Consider one-time, transaction, service, productized-service, or portfolio-buyer models when they fit better.
 
-Downgrade when acquisition effort is incompatible with price, manual work grows linearly without adequate pricing, every customer needs unique integrations, trust requirements exceed credibility, or the operating reality conflicts with the founder's constraints.
+Downgrade when manual work grows linearly without adequate pricing, every customer needs unique integrations, trust requirements exceed credibility, or the operating reality conflicts with the founder's constraints.
 
 ## 5. Baseline: durability and red team
 
@@ -103,18 +100,18 @@ Apply:
 
 - **10x capability test:** What becomes commoditized if the enabling technology becomes 10x better and widely available?
 - **Zero-input-cost test:** Does value remain if model, compute, or software capability becomes nearly free?
-- **Incumbent response test:** Can an incumbent bundle, copy, restrict access, lower price, or use distribution to neutralize it?
+- **Incumbent response test:** Can an incumbent bundle, copy, restrict access, lower price, or use its installed base to neutralize it?
 - **Replication test:** What prevents a competent competitor from reproducing the product, data, and operations?
 - **Margin test:** Does the claimed moat improve economics or merely add labor, compliance, capital, and liability?
 - **Trust test:** Why will the customer delegate, who is accountable after error, and what recourse exists?
 - **Substitution test:** Can the underlying need be met through a different behavior, business model, internal process, or free tool?
 - **Evidence test:** Is there demonstrated spending, loss, risk, or behavior, or only a plausible story?
 
-Test whether the business can genuinely control a non-commoditizing layer such as trusted distribution, workflow ownership, continuously refreshed lawful data, feedback from normal usage, regulatory permission, local operating knowledge, physical density, capital, risk-bearing, guarantees, accountability, or exception-handling knowledge.
+Test whether the business can genuinely control a non-commoditizing layer such as workflow ownership, continuously refreshed lawful data, feedback from normal usage, regulatory permission, local operating knowledge, physical density, capital, risk-bearing, guarantees, accountability, or exception-handling knowledge.
 
-Do not call AI, proprietary data, regulation, operational complexity, or multi-agent orchestration a moat without explaining acquisition, maintenance, cost, and how it improves trust, retention, distribution, or economics.
+Do not call AI, proprietary data, regulation, operational complexity, or multi-agent orchestration a moat without explaining creation, maintenance, cost, and how it improves trust, retention, or economics.
 
-Downgrade when value disappears as technology improves, an incumbent can copy and distribute cheaply, the scarce layer is only claimed, complexity creates burden without learning, or trust cannot plausibly be earned.
+Downgrade when value disappears as technology improves, an incumbent can copy and bundle cheaply, the scarce layer is only claimed, complexity creates burden without learning, or trust cannot plausibly be earned.
 
 ## 6. AI, research, advice, and content products
 
@@ -172,7 +169,7 @@ Investigate:
 - Whether the buyer pays for judgment, execution, risk reduction, speed, or capacity.
 - Delivery hours, utilization, gross margin, handoffs, revisions, and scope creep.
 - Repeatable inputs, outputs, exclusions, and acceptance criteria.
-- Founder credibility, relationship access, and sales motion.
+- Founder credibility and the trust proof required to deliver the service.
 - Which parts should remain human and which can become software.
 - Whether the service generates reusable process knowledge or only linear labor.
 - Whether the offer improves or distracts from an existing core business.
@@ -186,9 +183,9 @@ Investigate:
 - Which side has the urgent problem and budget.
 - Single-player utility before network density.
 - Geographic, category, or temporal liquidity requirements.
-- Supply acquisition, quality control, trust and safety, disputes, and disintermediation.
+- Supply quality, participant incentives, trust and safety, disputes, and disintermediation.
 - Take rate versus the value and risk actually assumed.
-- Whether an existing channel can provide initial density.
+- Whether either side receives enough standalone value before density exists.
 - Why participants will not transact directly after discovery.
 
 Downgrade products that require both sides at scale before either receives value. Prefer workflow or SaaS tools that can become a network later.
@@ -199,10 +196,8 @@ Investigate:
 
 - Frequency, habit, emotional trigger, and current spending.
 - Free substitutes, platform features, communities, and manual workarounds.
-- Acquisition channel, content burden, virality assumptions, and paid acquisition economics.
 - Retention after novelty and switching behavior.
 - Privacy, trust, moderation, and support burden.
-- Whether the founder can reach a defined niche without a broad audience.
 
 Be especially skeptical of low-frequency utilities, generic self-improvement, broad productivity, and products whose business model depends on unspecified scale.
 
@@ -229,6 +224,6 @@ Separate the user from the economic buyer. Investigate:
 - Time to value without organization-wide adoption.
 - Expansion from a narrow technical wedge without becoming a generic platform.
 - Support, uptime, version compatibility, and on-call expectations.
-- Whether the founder has credible access to teams with buying authority.
+- Whether the economic buyer receives enough value to justify enterprise trust and procurement burden.
 
 Downgrade tools that developers like but budget owners do not need, or whose target price cannot support enterprise trust and support requirements.

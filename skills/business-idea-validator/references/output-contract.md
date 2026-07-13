@@ -70,7 +70,7 @@ Include exactly these seven gates:
 
 1. Pain and urgency
 2. Existing spend or willingness to pay
-3. Reachability
+3. Buyer and workflow clarity
 4. Wedge and differentiation
 5. Economics and recurrence
 6. Feasibility and owner burden
@@ -110,7 +110,7 @@ Then include:
 
 Design a 7-14 day test and specify:
 
-- Exact prospect profile and a realistic source for 10-20 prospects.
+- Exact participant profile for a 10-20 person validation sample; assume the user handles recruitment.
 - Concrete manual, concierge, productized-service, or lightweight offer.
 - Real price or other meaningful commitment.
 - Evidence to collect, including comparison with the current method.

@@ -45,7 +45,7 @@ If the user supplies a target such as 500 stars, preserve it but identify what i
 
 ## 3. Normalize and frame the project
 
-Extract the target user, trigger or workflow, current alternative, utility, reason for open source, ecosystem, creator capabilities, skills to demonstrate, strategic audience, distribution access, evidence, dependencies, and constraints.
+Extract the target user, trigger or workflow, current alternative, utility, reason for open source, ecosystem, creator capabilities, skills to demonstrate, strategic audience, evidence, dependencies, and constraints.
 
 Create one sentence:
 
@@ -58,13 +58,12 @@ If the utility, open-source mechanism, or success evidence remains vague, narrow
 Prioritize:
 
 1. Does a specific user receive standalone value?
-2. Why does open source improve the outcome or adoption path?
+2. Why does open source improve the outcome, user control, or collaboration model?
 3. What direct, open-source, commercial, internal, or DIY alternatives already exist?
-4. Can the creator reach the first 10-20 relevant users through a credible ecosystem surface?
-5. Can a user reach value quickly enough to test the claim?
-6. Does the artifact expose the capabilities the creator wants recognized?
-7. Can the creator sustain compatibility, support, security, and governance demands?
-8. What concrete opportunity could follow if adoption occurs, without assuming it will?
+4. Can a relevant user understand, install, and reach the first useful outcome without disproportionate friction?
+5. Does the artifact expose the capabilities the creator wants recognized?
+6. Can the creator sustain compatibility, support, security, and governance demands?
+7. What concrete opportunity could follow if adoption occurs, without assuming it will?
 
 Stop researching when evidence supports the gates, a fatal flaw is established, or the remaining uncertainty requires real usage.
 
@@ -76,12 +75,12 @@ Create alternatives only to repair `WEAK` or `UNKNOWN` gates. Change no more tha
 - Trigger or workflow
 - Scope or abstraction level
 - Integration or ecosystem
-- Distribution surface
+- Setup or adoption model
 - Open-core boundary
 - Support or governance promise
 - Primary success objective
 
-Useful repairs include narrowing to one painful integration, shipping a reference implementation instead of a framework, targeting an ecosystem with an existing discovery surface, reducing compatibility promises, or changing a showcase project into a real utility for a small user group.
+Useful repairs include narrowing to one painful integration, shipping a reference implementation instead of a framework, reducing setup or migration burden, reducing compatibility promises, or changing a showcase project into a real utility for a small user group.
 
 Reject cosmetic repairs such as adding AI, polishing branding, accumulating examples without testing use, or changing license without a user or stewardship reason.
 

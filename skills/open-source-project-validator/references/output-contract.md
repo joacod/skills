@@ -38,7 +38,7 @@ Include exactly these seven gates:
 2. Open-source fit
 3. Distinctiveness and ecosystem gap
 4. Artifact and skill signal
-5. Reachability and adoption path
+5. Adoption friction and time to value
 6. Maintenance sustainability
 7. Strategic leverage and optionality
 
@@ -68,7 +68,7 @@ State the best position and why. Include:
 
 ### 8. Smallest evidence-producing test
 
-Specify the target users, source for 10-20 relevant people or teams, smallest artifact, real workflow, requested meaningful behavior, evidence to collect, and explicit `pass`, `iterate`, and `kill` thresholds.
+Specify the target-user profile for a 10-20 person validation sample, smallest artifact, real workflow, requested meaningful behavior, evidence to collect, and explicit `pass`, `iterate`, and `kill` thresholds. Assume the user handles participant recruitment.
 
 If the primary success contract is already satisfied and no material uncertainty affects a preserve-or-park decision, replace the test with a maintenance checkpoint. Present a test for a new objective only when the user explicitly wants to pursue it, and label it separately.
 

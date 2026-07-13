@@ -1,6 +1,6 @@
 ---
 name: business-idea-validator
-description: Evaluate and pressure-test business, product, SaaS, service, and startup ideas using current evidence, competitive research, decision gates, repair pivots, and a small paid validation test. Use when deciding whether to pursue, test, pivot, park, or drop an idea; comparing ideas; exploring a problem space; assessing market crowding, founder fit, economics, reachability, or defensibility; or updating a verdict after customer evidence. Return a compact decision card, not generic encouragement or a full business plan.
+description: Evaluate and pressure-test business, product, SaaS, service, and startup ideas using current evidence, competitive research, decision gates, repair pivots, and a small paid validation test. Use when deciding whether to pursue, test, pivot, park, or drop an idea; comparing ideas; exploring a problem space; assessing customer pain, buyer and workflow clarity, market crowding, founder fit, economics, or defensibility; or updating a verdict after customer evidence. Return a compact decision card, not generic encouragement or a full business plan.
 ---
 
 # Business Idea Validator
@@ -16,10 +16,10 @@ MY IDEA:
 [rough idea, problem space, or alternatives]
 
 EXTRA INFO:
-[founder skills, customer access, geography, constraints, desired model, budget, known competitors, links, evidence, experiment results, or directions to avoid]
+[founder skills, geography, constraints, desired model, budget, known competitors, links, evidence, experiment results, or directions to avoid]
 ```
 
-Preserve the proposed customer, problem, product, outcome, business model, founder context, geography, evidence, and exclusions. Treat founder capabilities and access as a working model, not proof of demand or distribution.
+Preserve the proposed customer, problem, product, outcome, business model, founder context, geography, evidence, and exclusions. Treat founder capabilities as a working model, not proof of demand.
 
 Do not ask for missing optional fields. Infer only what is necessary, label consequential assumptions, and ask a question only when the input is unintelligible or two interpretations would produce materially different evaluations.
 
@@ -30,9 +30,9 @@ Do not ask for missing optional fields. Infer only what is necessary, label cons
 3. **Build the evidence ledger.** Read [evidence-standards.md](references/evidence-standards.md). Track facts, inferences, assumptions, unknowns, contradictions, dates, affected gates, confidence, and decision implications. Do not expose the raw ledger unless requested.
 4. **Investigate by decision value.** Research the claims most capable of changing the verdict. Stop when the gates are defensible, a fatal flaw is established, or remaining uncertainty requires customer behavior rather than more desk research.
 5. **Judge the opportunity.** Read [decision-framework.md](references/decision-framework.md). Rate all seven gates as `STRONG`, `MIXED`, `WEAK`, or `UNKNOWN`. Do not average away a fatal flaw or use a numeric score to manufacture precision.
-6. **Design repair pivots.** Create up to four materially different versions including the original. Make every pivot repair a named weak or unknown gate by changing no more than two variables such as buyer, trigger, workflow, scope, delivery model, channel, or responsibility.
+6. **Design repair pivots.** Create up to four materially different versions including the original. Make every pivot repair a named weak or unknown gate by changing no more than two variables such as buyer, trigger, workflow, scope, delivery model, pricing unit, or responsibility.
 7. **Design the evidence-producing test.** Read [validation-experiments.md](references/validation-experiments.md). Test the most dangerous assumption using payment, deposit, signed pilot, access to real data, repeated use, workflow access, or referral to a budget owner.
-8. **Update after real evidence.** In `Update` mode, read [iteration-loop.md](references/iteration-loop.md). Preserve unaffected conclusions, show what changed, and distinguish a weak idea from a weak offer, channel, price, message, or test design.
+8. **Update after real evidence.** In `Update` mode, read [iteration-loop.md](references/iteration-loop.md). Preserve unaffected conclusions, show what changed, and distinguish a weak idea from a weak offer, price, scope, or test design.
 9. **Synthesize one compact answer.** Read and follow [output-contract.md](references/output-contract.md). Produce one integrated decision, not separate reports from each profile.
 10. **Review and revise once.** Privately apply [quality-control.md](references/quality-control.md). Correct unsupported claims, weak pivots, false precision, repetition, and non-behavioral tests before answering. Do not expose drafts or hidden reasoning.
 
@@ -60,9 +60,9 @@ When browsing is unavailable or the user asks not to browse, provide a provision
 - Prefer observable spending, losses, workarounds, and behavior over trend narratives.
 - Treat general-purpose AI plus a strong prompt as a primary substitute for AI research, advice, analysis, content, and idea products.
 - Distinguish recurring revenue from setup, implementation, transaction, and service revenue.
-- Separate build, domain, trust, and distribution advantages.
+- Separate build, domain, and trust advantages.
 - Evaluate the normal owner experience after launch, not only build feasibility.
-- Treat regulation, proprietary data, operational complexity, AI, and multi-agent orchestration as advantages only when they concretely improve trust, economics, retention, distribution, or defensibility.
+- Treat regulation, proprietary data, operational complexity, AI, and multi-agent orchestration as advantages only when they concretely improve trust, economics, retention, or defensibility.
 - Treat desk research as pre-validation, not proof of demand.
 - State `insufficient evidence` instead of manufacturing certainty.
 
@@ -70,7 +70,9 @@ When browsing is unavailable or the user asks not to browse, provide a provision
 
 Do not produce a full business plan, TAM/SAM/SOM, SWOT analysis, PRD, pitch deck, branding, five-year financial model, giant feature list, or full go-to-market plan unless the user explicitly asks for that separate artifact.
 
-Do not invent customer quotes, synthetic interviews, partnerships, credentials, distribution advantages, proprietary data, APIs, licenses, or willingness to pay.
+Do not evaluate channels, audience building, customer acquisition strategy, launch tactics, or go-to-market execution, and do not downgrade an otherwise strong idea merely because the founder lacks an existing audience. Distribution is a separate problem. Mention it only when the idea structurally depends on unusual access, network density, virality, or another exceptional condition, and keep that note to a concise risk rather than a plan or gate.
+
+Do not invent customer quotes, synthetic interviews, partnerships, credentials, proprietary data, APIs, licenses, or willingness to pay.
 
 If the user requests a different presentation, adapt the format while preserving the direct verdict, seven decision gates, crowding judgment, stronger versions, kill conditions, and evidence-producing test.
 

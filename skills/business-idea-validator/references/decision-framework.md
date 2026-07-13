@@ -20,9 +20,9 @@ Ask whether a specific trigger creates a costly, risky, delayed, or revenue-rele
 
 Look for budgets, fees, labor, losses, penalties, paid substitutes, or meaningful commitments.
 
-### 3. Reachability
+### 3. Buyer and workflow clarity
 
-Ask whether the founder can identify and reach the first 20 plausible buyers through credible channels without requiring a large sales organization or broad consumer audience.
+Ask whether the buyer, user, budget owner, trigger, current workflow, and adoption decision are specific enough to evaluate. A compelling idea should identify who receives value, who authorizes payment, and where the product fits without relying on vague labels such as “small businesses” or “everyone.”
 
 ### 4. Wedge and differentiation
 
@@ -30,7 +30,7 @@ Ask whether a narrow reason exists to choose this offer over focused competitors
 
 ### 5. Economics and recurrence
 
-Ask whether pricing can support acquisition, delivery, onboarding, support, and continued use. Distinguish recurring, usage, transaction, setup, implementation, and service revenue.
+Ask whether pricing can support delivery, onboarding, support, and continued use. Distinguish recurring, usage, transaction, setup, implementation, and service revenue.
 
 ### 6. Feasibility and owner burden
 
@@ -59,7 +59,7 @@ A fatal flaw can determine the verdict regardless of other strengths. Examples i
 
 - No identifiable buyer or trigger
 - Problem lacks meaningful consequence
-- Buyer is unreachable at the proposed price
+- Buyer, user, or workflow remains too vague to form a testable offer
 - Cheap, focused alternatives already solve the problem with no credible wedge
 - Required legal permission, data, API, partnership, capital, or trust cannot plausibly be obtained
 - Liability, security, support, or implementation cost overwhelms revenue
@@ -85,7 +85,7 @@ Use when the underlying buyer, problem, workflow, or market contains evidence, b
 
 ### `PARK`
 
-Use when the idea may become attractive but current timing, founder constraints, access, evidence, regulation, or test cost makes it irrational to pursue now. State the event or evidence that should trigger reconsideration.
+Use when the idea may become attractive but current timing, founder constraints, evidence, regulation, or test cost makes it irrational to pursue now. State the event or evidence that should trigger reconsideration.
 
 ### `DROP`
 
@@ -106,11 +106,11 @@ Confidence describes the verdict's evidentiary support, not enthusiasm for the i
 Use one of these descriptions:
 
 - **Validated but undifferentiated:** Spending is visible, but the idea lacks a compelling wedge.
-- **Crowded with a credible wedge:** Many alternatives exist, yet a specific buyer, trigger, workflow, channel, or responsibility remains underserved.
+- **Crowded with a credible wedge:** Many alternatives exist, yet a specific buyer, trigger, workflow, outcome, or responsibility remains underserved.
 - **Fragmented or underserved:** Alternatives are broad, manual, service-heavy, local, or poorly coordinated, and a focused outcome may be sellable.
 - **Sparse and unproven:** Few alternatives exist and demand evidence is weak; absence of competition is not positive evidence.
 
-Crowding is not a verdict by itself. Combine it with spend, reachability, and wedge.
+Crowding is not a verdict by itself. Combine it with spend, buyer and workflow clarity, and wedge.
 
 ## 7. Pivot quality
 
@@ -127,5 +127,5 @@ A weak pivot:
 - Adds features or AI.
 - Changes branding only.
 - Moves to a random industry.
-- Assumes a new distribution advantage.
+- Assumes customer behavior will change without a concrete reason.
 - Avoids the real fatal flaw.

@@ -8,7 +8,7 @@ Ask whether a specific user has a real trigger or workflow and whether the proje
 
 ### 2. Open-source fit
 
-Ask whether source availability materially improves trust, inspectability, extensibility, interoperability, self-hosting, learning, local control, or ecosystem participation. Open source is a distribution and collaboration model, not proof of value.
+Ask whether source availability materially improves trust, inspectability, extensibility, interoperability, self-hosting, learning, local control, or ecosystem participation. Publishing source is not proof of value.
 
 ### 3. Distinctiveness and ecosystem gap
 
@@ -18,9 +18,9 @@ Ask why a user would adopt or contribute instead of using established open-sourc
 
 Ask whether the repository visibly demonstrates capabilities valued by the intended strategic audience. Consider code quality, tests, types, documentation, examples, local development, release discipline, architecture tradeoffs, security, and evidence of thoughtful maintenance. Match the signal to the desired role or opportunity.
 
-### 5. Reachability and adoption path
+### 5. Adoption friction and time to value
 
-Ask whether the creator can identify and reach the first 10-20 relevant users through package registries, integrations, existing communities, direct relationships, technical content, or ecosystem contribution without requiring a broad audience.
+Ask whether a relevant user can understand the project, install or evaluate it, complete the core workflow, and obtain value without disproportionate setup, migration, integration, trust, or organizational change. Judge the product's adoption burden, not how the creator will promote it.
 
 ### 6. Maintenance sustainability
 
@@ -69,11 +69,11 @@ Use when the project is credible but one or two high-impact assumptions can be t
 
 ### `PIVOT`
 
-Use when the underlying problem, capability, or ecosystem is useful but the current user, scope, integration, distribution surface, maintenance promise, or success objective is weak. Name the repaired position.
+Use when the underlying problem, capability, or ecosystem is useful but the current user, scope, integration, setup model, maintenance promise, or success objective is weak. Name the repaired position.
 
 ### `PARK`
 
-Use when the project may become attractive but current timing, creator constraints, ecosystem maturity, access, or test cost makes pursuit irrational. State the reconsideration trigger.
+Use when the project may become attractive but current timing, creator constraints, ecosystem maturity, or test cost makes pursuit irrational. State the reconsideration trigger.
 
 ### `DROP`
 

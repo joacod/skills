@@ -70,7 +70,7 @@ Extract these fields when present:
 | Consequence | Cost, risk, delay, lost revenue, anxiety, or liability |
 | Outcome | Result the buyer would pay to obtain |
 | Frequency | How often the trigger and workflow recur |
-| Founder context | Build, domain, trust, distribution, capital, and lifestyle constraints |
+| Founder context | Build, domain, trust, capital, and lifestyle constraints |
 | Known evidence | Payments, interviews, complaints, workflows, pricing, links, or experiments |
 | Constraints | Geography, time, budget, regulation, support, service, integrations, or exclusions |
 
@@ -84,7 +84,7 @@ Create one sentence:
 
 If the sentence remains vague, the idea is not ready for a positive verdict. Narrow the buyer, trigger, workflow, or outcome before expanding features.
 
-Identify no more than three consequential assumptions. Prefer assumptions that could reverse the verdict, such as buyer urgency, willingness to pay, reachability, legal permission, access to data, or recurring behavior.
+Identify no more than three consequential assumptions. Prefer assumptions that could reverse the verdict, such as buyer urgency, willingness to pay, workflow clarity, legal permission, access to data, or recurring behavior.
 
 ## 4. Route the investigation
 
@@ -105,9 +105,9 @@ Prioritize unknowns that can change the verdict. Use this order:
 
 1. Does a specific buyer experience a costly or urgent consequence?
 2. Is there evidence of existing spend, budget, or costly behavior?
-3. Can the founder reach plausible buyers?
+3. Are the buyer, user, budget owner, and workflow specific enough to form a testable offer?
 4. Does a credible wedge remain against all substitutes?
-5. Can the economics support delivery and acquisition?
+5. Can the economics support delivery, onboarding, and support?
 6. Are legal, technical, security, operational, or capital requirements acceptable?
 7. Does value survive cheaper technology and incumbent response?
 
@@ -149,7 +149,6 @@ Allowed variables:
 - Scope
 - Delivery model
 - Pricing unit
-- Channel
 - Responsibility or risk assumed
 
 Change no more than two variables per pivot. Keep enough of the original insight to make the comparison useful.
@@ -160,7 +159,7 @@ Useful pivot patterns:
 - Sell a smaller, measurable outcome.
 - Replace software-first with a paid concierge or productized service.
 - Sell to a repeat or portfolio buyer when end-user demand is episodic.
-- Sell through or to an incumbent rather than displacing it.
+- Sell a supporting workflow to an incumbent rather than displacing it.
 - Remove a regulated, capital-intensive, or unreliable step.
 - Shift from information to execution when customers pay for completion.
 - Shift from execution to workflow support when liability makes outcome ownership unattractive.
@@ -184,7 +183,7 @@ Do not reveal internal profile transcripts or hidden reasoning. Surface evidence
 When the user returns with test results:
 
 1. Convert each result into an evidence state.
-2. Distinguish qualified prospects from friends, peers, or non-buyers.
+2. Distinguish qualified participants from friends, peers, or people outside the target workflow.
 3. Distinguish stated interest from meaningful commitment.
 4. Update the affected gate signal and confidence.
 5. Check whether the strongest pivot changed.

@@ -8,7 +8,7 @@ A test must specify:
 
 - Primary success objective and dangerous assumption.
 - Exact user or strategic-audience profile.
-- A realistic source for 10-20 relevant people or teams.
+- A 10-20 person relevant sample; assume the user handles recruitment.
 - Smallest artifact and concrete workflow.
 - Meaningful behavior requested.
 - Evidence to collect.
@@ -19,7 +19,7 @@ A test must specify:
 
 ### User problem and utility
 
-Recruit relevant users with the target workflow. Observe them attempt a real task with a narrow prototype, example repository, CLI, library, or manually supported implementation. Measure completion and comparison with the current method.
+Run the test with relevant users from the target workflow. Observe them attempt a real task with a narrow prototype, example repository, CLI, library, or manually supported implementation. Measure completion and comparison with the current method.
 
 ### Open-source fit
 
@@ -33,9 +33,9 @@ Ask qualified users to choose between the project and the best current alternati
 
 Have members of the intended strategic audience inspect the repository and explain what capabilities it proves, what remains unverifiable, and whether the architecture and tradeoffs can be defended. Prefer concrete opportunities or detailed technical assessment over compliments.
 
-### Reachability and adoption
+### Adoption friction and time to value
 
-Publish one useful integration or example where target users already discover tools, then conduct direct outreach to qualified teams. Measure successful evaluations and workflow completion rather than impressions or raw clicks.
+Observe relevant users installing or evaluating the smallest artifact and completing the core workflow. Measure time to first value, failed setup, migration burden, integration work, trust objections, and independent completion rather than impressions or raw clicks.
 
 ### Maintenance sustainability
 
@@ -64,7 +64,7 @@ For showcase objectives, a concrete interview, collaboration, referral, or detai
 Within 14-30 days:
 
 1. Choose one user segment, workflow, ecosystem, and success objective.
-2. Identify 10-20 relevant users or teams through dependencies, issue trackers, communities, direct relationships, job posts, or public technical stacks.
+2. Run the test with 10-20 relevant users or teams; participant recruitment is outside this framework.
 3. Produce only the smallest credible artifact: often a README, runnable example, narrow implementation, and documented tradeoffs.
 4. Help the first users try it on a real case without hiding setup friction.
 5. Ask for the next meaningful behavior: repeat use, integration, issue, contribution, referral, or case-study permission.
@@ -83,8 +83,7 @@ Do not use these alone as validation:
 - Downloads without verified execution.
 - A polished README shown only to non-users.
 - Synthetic personas or simulated code review.
-- Building in public without target-user behavior.
 - A testimonial requested before successful use.
 - One maintainer or influencer mentioning the project without adoption.
 
-Distribution activity is not evidence until the intended audience takes a decision-relevant action.
+Promotion activity is not validation; only decision-relevant user behavior affects the verdict.

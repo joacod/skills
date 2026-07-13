@@ -13,15 +13,15 @@ A product runs several AI investigation profiles, researches a founder's idea, s
 - Treat general-purpose AI plus a strong prompt as a primary substitute.
 - Research current validation and idea-research products before claiming novelty.
 - Recognize that individual founders may buy episodically rather than subscribe.
-- Separate technical feasibility from differentiation and distribution.
+- Separate technical feasibility from differentiation and buyer value.
 - Test whether the stronger buyer is a software studio, accelerator, founder community, venture studio, or other repeat evaluator.
 - Test whether a paid human-reviewed diligence sprint can validate demand before recommending an agent dashboard.
 - Reject "number of agents" as a customer benefit or moat.
-- Generate pivots that repair recurrence, trust, or distribution rather than adding features.
+- Generate pivots that repair recurrence, trust, or buyer and workflow clarity rather than adding features.
 
 ### Acceptable verdict range
 
-With only the supplied input, `TEST` or `PIVOT` is calibrated because demand, recurrence, differentiation, and distribution remain unproven. `PURSUE` becomes defensible only when current research and direct evidence establish a credible wedge, buyer access, and meaningful commitment. `PARK` or `DROP` can be correct when current evidence establishes a fatal flaw. The verdict must come from that evidence, not from this fixture.
+With only the supplied input, `TEST` or `PIVOT` is calibrated because demand, recurrence, differentiation, and buyer value remain unproven. `PURSUE` becomes defensible only when current research and direct evidence establish a credible wedge, clear buyer and workflow, and meaningful commitment. `PARK` or `DROP` can be correct when current evidence establishes a fatal flaw. The verdict must come from that evidence, not from this fixture.
 
 ## Case 2: Renewal evidence tracker for a narrow contractor segment
 
@@ -39,7 +39,7 @@ A focused workflow tool collects required documents, tracks expirations, sends r
 
 ### Acceptable verdict range
 
-`TEST` when recurring pain, buyer access, and a narrow workflow are supported. `PIVOT` or `DROP` when the workflow is rare, already solved cheaply, or legally burdensome.
+`TEST` when recurring pain, buyer and workflow clarity, and a narrow outcome are supported. `PIVOT` or `DROP` when the workflow is rare, already solved cheaply, or legally burdensome.
 
 ## Case 3: Broad consumer expert marketplace
 
@@ -50,14 +50,14 @@ A marketplace matches consumers with experts and uses AI to recommend the best e
 ### Expected reasoning behavior
 
 - Trigger the marketplace and consumer profiles.
-- Examine standalone value, liquidity, trust, fraud, disintermediation, acquisition cost, and frequency.
+- Examine standalone value, liquidity, trust, fraud, disintermediation, and frequency.
 - Treat AI matching as a feature, not a wedge.
-- Look for a one-sided service or workflow product with existing distribution.
-- Do not assume supply and demand can be acquired cheaply.
+- Look for a one-sided service or workflow product that delivers value before network density.
+- Do not assume both sides will participate before either receives standalone value.
 
 ### Acceptable verdict range
 
-`PARK`, `PIVOT`, or `DROP` is calibrated when the supplied idea lacks owned distribution, a high-frequency trigger, or standalone value. `TEST` or `PURSUE` requires current evidence that resolves liquidity, trust, acquisition, and standalone-value risks.
+`PARK`, `PIVOT`, or `DROP` is calibrated when the supplied idea lacks a high-frequency trigger, standalone value, or a credible path through the liquidity problem. `TEST` or `PURSUE` requires current evidence that resolves liquidity, trust, and standalone-value risks.
 
 ## Calibration failure signals
 

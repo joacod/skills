@@ -3,7 +3,7 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "I am considering an open-source TypeScript toolkit for receiving, verifying, replaying, and debugging webhooks. I do not need it to make money immediately. I want a recognizable infrastructure project that demonstrates strong engineering to good product companies and might later lead to consulting, a hosted service, or useful industry relationships. I have no audience and can spend about 10 hours a week for three months. Please evaluate whether this is worth pursuing and how I should validate it before building a broad framework.",
+      "prompt": "I am considering an open-source TypeScript toolkit for receiving, verifying, replaying, and debugging webhooks. I do not need it to make money immediately. I want a recognizable infrastructure project that demonstrates strong engineering to good product companies and might later lead to consulting, a hosted service, or useful industry relationships. I can spend about 10 hours a week for three months. Please evaluate whether this is worth pursuing and how I should validate it before building a broad framework.",
       "expected_output": "Defines a non-commercial success contract, evaluates real webhook utility and current alternatives, distinguishes technical credibility from adoption, accounts for maintenance, treats future monetization as optionality, and proposes a narrow real-workflow test with relevant teams rather than a star target.",
       "files": [],
       "expectations": [
@@ -18,14 +18,14 @@
     },
     {
       "id": 2,
-      "prompt": "I want to rebuild a popular task manager with Next.js and a very polished README. My goal is 1,000 GitHub stars and something impressive to show employers. I plan to build in public every day and post it to launch sites when it looks good. Is this a strong open-source project idea?",
-      "expected_output": "Treats stars and build-in-public activity as weak attention signals, identifies the missing user utility and technical distinction, tests what capabilities matter to the intended employers, and recommends a narrower meaningful position or a direct pivot rather than generic encouragement.",
+      "prompt": "I want to rebuild a popular task manager with Next.js and a very polished README. My goal is 1,000 GitHub stars and something impressive to show employers. Is this a strong open-source project idea?",
+      "expected_output": "Treats stars as a weak attention signal, identifies the missing user utility and technical distinction, tests what capabilities matter to the intended employers, and recommends a narrower meaningful position or a direct pivot rather than generic encouragement.",
       "files": [],
       "expectations": [
         "The output explicitly distinguishes GitHub stars from adoption, code quality, or employer validation.",
         "The output leads with PURSUE, TEST, PIVOT, PARK, or DROP, states confidence, and names the primary success objective.",
         "The output includes a decision card covering all seven gates defined by the skill.",
-        "The output treats building in public as a distribution tactic rather than proof of demand.",
+        "The output focuses on project utility, distinctiveness, artifact quality, and adoption friction rather than launch or promotion tactics.",
         "The verdict is PIVOT, DROP, or a tightly bounded TEST rather than unconditional pursuit.",
         "The recommendation connects the artifact to capabilities valued by a defined technical audience.",
         "The output sets an explicit initial or recurring maintenance budget and ends with the three most consequential unknowns."

@@ -14,18 +14,18 @@ A TypeScript library helps teams receive, verify, replay, and debug webhooks loc
 - Research current webhook tools, libraries, hosted products, framework integrations, and local-development workflows.
 - Test one narrow integration and real webhook workflow before recommending a broad framework.
 - Treat documentation, examples, types, tests, local setup, reliability, and explainable architecture as credibility surfaces.
-- Recruit relevant teams for real installation and repeat use rather than asking only for feedback or stars.
+- Test with relevant teams using real installation and repeat use rather than asking only for feedback or stars; assume the user handles recruitment.
 - Keep consulting, employment, and hosting as optionality until attributable evidence appears.
 
 ### Acceptable verdict range
 
-`TEST` or `PIVOT` is calibrated with only the supplied input. `PURSUE` requires stronger evidence of a meaningful gap, reachable users, and bounded maintenance. Lack of immediate revenue potential must not force `DROP` under the open-source objective.
+`TEST` or `PIVOT` is calibrated with only the supplied input. `PURSUE` requires stronger evidence of a meaningful gap, usable artifact, and bounded maintenance. Lack of immediate revenue potential must not force `DROP` under the open-source objective.
 
 ## Case 2: Polished clone seeking stars
 
 ### Input
 
-A creator plans to rebuild a popular task manager with a modern stack, polished README, and launch campaign. Success is defined as 1,000 stars and something attractive to show employers. No target user need or technical distinction is identified.
+A creator plans to rebuild a popular task manager with a modern stack and polished README. Success is defined as 1,000 stars and something attractive to show employers. No target user need or technical distinction is identified.
 
 ### Expected reasoning behavior
 
@@ -33,7 +33,6 @@ A creator plans to rebuild a popular task manager with a modern stack, polished 
 - Ask what capability the artifact demonstrates to which employers.
 - Identify the lack of standalone utility and distinctiveness.
 - Prefer a narrower technically meaningful project or explicit learning objective over polishing a clone.
-- Refuse to treat build-in-public activity as validation.
 
 ### Acceptable verdict range
 
@@ -48,7 +47,7 @@ A solo maintainer has a self-hosted deployment tool used by several teams, but e
 ### Expected reasoning behavior
 
 - Recognize real adoption while rating maintenance sustainability separately.
-- Measure support, compatibility, and security burden rather than recommending more distribution.
+- Measure support, compatibility, and security burden rather than recommending more growth.
 - Consider narrowing supported platforms, transferring stewardship, documenting maintenance status, or parking new features.
 - Evaluate whether existing usage and stewardship already provide sufficient career evidence.
 
@@ -83,4 +82,4 @@ Recalibrate if the skill:
 - Recommends polishing a full repository before testing user utility.
 - Ignores support, compatibility, security, governance, or abandonment burden.
 - Invents production users, contributors, testimonials, opportunities, or future revenue.
-- Produces generic build-in-public advice instead of an evidence-producing test.
+- Produces launch or promotion advice instead of an evidence-producing test.

@@ -21,17 +21,17 @@ Run this audit privately after drafting and revise once when a critical check fa
 ## Product and open-source fit
 
 - Does a specific user receive standalone value?
-- Is there a concrete reason source availability improves the outcome or adoption path?
+- Is there a concrete reason source availability improves the outcome, control, or collaboration model?
 - Does the substitute set include mature open source, commercial products, platforms, internal code, generic tools, and doing nothing?
-- Is the wedge a user, workflow, integration, technical, distribution, trust, or stewardship advantage rather than a feature list?
+- Is the wedge a user, workflow, integration, technical, trust, or stewardship advantage rather than a feature list?
 
-## Credibility and distribution
+## Credibility and adoption
 
 - Does the artifact demonstrate capabilities relevant to the intended audience?
 - Are documentation, examples, tests, types, local setup, architecture, and security prioritized according to the evidence they need to produce?
 - Is developer experience treated as an adoption and credibility mechanism rather than an automatic moat?
-- Does distribution reach target users rather than only other builders or a general audience?
-- Is building in public presented as optional and testable?
+- Can a relevant user understand, install, and reach value without disproportionate friction?
+- Were launch, promotion, audience-building, and outreach advice omitted?
 
 ## Maintenance and opportunity
 

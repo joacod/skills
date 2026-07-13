@@ -68,6 +68,5 @@ Do not:
 - Infer code quality from popularity or popularity from code quality.
 - Invent users, contributors, testimonials, opportunities, partnerships, or retention.
 - Call developer experience a moat without a durable mechanism such as integrations, habits, compatibility, or community stewardship.
-- Assume building in public reaches the project's actual users.
 - Present a hosted service, dual license, enterprise tier, support plan, or sponsorship as validated revenue.
 - Count learning value as external credibility without an inspectable artifact and relevant audience.

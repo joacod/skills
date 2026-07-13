@@ -70,7 +70,7 @@ For each representative alternative, verify as available:
 - Customer and use case
 - Workflow and outcome
 - Pricing or business model
-- Distribution or implementation model
+- Implementation model
 - Trust or responsibility assumed
 - Current status
 
@@ -104,7 +104,7 @@ Base confidence on source quality, directness, recency, corroboration, and consi
 Do not:
 
 - Use TAM, CAGR, search volume, social engagement, or AI adoption as proof of willingness to pay.
-- Invent pricing, APIs, partnerships, legal permissions, distribution access, conversion rates, or buyer behavior.
+- Invent pricing, APIs, partnerships, legal permissions, conversion rates, or buyer behavior.
 - Present synthetic interviews or model opinions as customer evidence.
 - Claim a moat because data is proprietary without testing lawfulness, refresh, reproducibility, workflow integration, and economic effect.
 - Claim regulation or operational complexity is attractive without measuring pre-scale burden and liability.
