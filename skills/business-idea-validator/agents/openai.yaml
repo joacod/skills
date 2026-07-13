@@ -1,0 +1,4 @@
+interface:
+  display_name: "Business Idea Validator"
+  short_description: "Pressure-test ideas and design evidence-driven validation."
+  default_prompt: "Use $business-idea-validator to evaluate this idea and recommend the smallest meaningful validation test."

@@ -20,6 +20,7 @@ Replace `<skill-name>` with one of the published skills listed above.
 | `refactor-design-patterns` | Practical guidance for deciding when a design pattern helps and how to refactor incrementally. | [Open](skills/refactor-design-patterns/SKILL.md#refactor-design-patterns) |
 | `react-anti-patterns` | Inject React anti-patterns and performance pitfalls for training, review, and teaching. | [Open](skills/react-anti-patterns/SKILL.md#react-anti-patterns) |
 | `ui-design-token-refactor` | Improve and systematize web UI styling with tokens, cascade layers, Tailwind theme variables, and accessible theming. | [Open](skills/ui-design-token-refactor/SKILL.md#ui-design-token-refactor) |
+| `business-idea-validator` | Pressure-test business ideas with evidence, decision gates, stronger pivots, and paid validation tests. | [Open](skills/business-idea-validator/SKILL.md#business-idea-validator) |
 
 ## Quick Install
 
@@ -45,4 +46,10 @@ npx skills add https://github.com/joacod/skills --skill react-anti-patterns
 
 ```bash
 npx skills add https://github.com/joacod/skills --skill ui-design-token-refactor
+```
+
+### `business-idea-validator`
+
+```bash
+npx skills add https://github.com/joacod/skills --skill business-idea-validator
 ```
