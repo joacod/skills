@@ -1,62 +1,22 @@
 # AI Agent Skills
 
-A growing collection of skills for AI coding agents.
+A collection of reusable skills for AI coding agents.
 
-## Usage
+## Install
 
-Install any skill from this repository with:
+Replace `<skill-name>` with a skill from the table below. GitHub adds a copy button to the command block.
 
 ```bash
 npx skills add https://github.com/joacod/skills --skill <skill-name>
 ```
 
-Replace `<skill-name>` with one of the published skills listed above.
-
 ## Available Skills
 
-| Skill | Description | Docs |
-|-------|-------------|------|
-| `secure-node-typescript` | Secure-by-default Node.js and TypeScript practices mapped to OWASP Top 10:2025. | [Open](skills/secure-node-typescript/SKILL.md#secure-nodejs-typescript) |
-| `refactor-design-patterns` | Practical guidance for deciding when a design pattern helps and how to refactor incrementally. | [Open](skills/refactor-design-patterns/SKILL.md#refactor-design-patterns) |
-| `react-anti-patterns` | Inject React anti-patterns and performance pitfalls for training, review, and teaching. | [Open](skills/react-anti-patterns/SKILL.md#react-anti-patterns) |
-| `ui-design-token-refactor` | Improve and systematize web UI styling with tokens, cascade layers, Tailwind theme variables, and accessible theming. | [Open](skills/ui-design-token-refactor/SKILL.md#ui-design-token-refactor) |
-| `business-idea-validator` | Pressure-test business ideas with evidence, decision gates, stronger pivots, and paid validation tests. | [Open](skills/business-idea-validator/SKILL.md#business-idea-validator) |
-| `open-source-project-validator` | Evaluate open-source project ideas for adoption, credibility, maintainability, and strategic opportunity value. | [Open](skills/open-source-project-validator/SKILL.md#open-source-project-validator) |
-
-## Quick Install
-
-### `secure-node-typescript`
-
-```bash
-npx skills add https://github.com/joacod/skills --skill secure-node-typescript
-```
-
-### `refactor-design-patterns`
-
-```bash
-npx skills add https://github.com/joacod/skills --skill refactor-design-patterns
-```
-
-### `react-anti-patterns`
-
-```bash
-npx skills add https://github.com/joacod/skills --skill react-anti-patterns
-```
-
-### `ui-design-token-refactor`
-
-```bash
-npx skills add https://github.com/joacod/skills --skill ui-design-token-refactor
-```
-
-### `business-idea-validator`
-
-```bash
-npx skills add https://github.com/joacod/skills --skill business-idea-validator
-```
-
-### `open-source-project-validator`
-
-```bash
-npx skills add https://github.com/joacod/skills --skill open-source-project-validator
-```
+| Skill | Category | Use it to |
+| --- | --- | --- |
+| [`secure-node-typescript`](skills/secure-node-typescript/SKILL.md) | Engineering | Build and review secure Node.js and TypeScript applications. |
+| [`refactor-design-patterns`](skills/refactor-design-patterns/SKILL.md) | Engineering | Decide when a design pattern helps and refactor toward it incrementally. |
+| [`react-anti-patterns`](skills/react-anti-patterns/SKILL.md) | Engineering | Create realistic React mistakes for training, review, and teaching. |
+| [`ui-design-token-refactor`](skills/ui-design-token-refactor/SKILL.md) | Engineering | Refactor CSS or Tailwind styling into an accessible token-based system. |
+| [`business-idea-validator`](skills/business-idea-validator/SKILL.md) | Validation | Pressure-test business ideas with evidence and practical experiments. |
+| [`open-source-project-validator`](skills/open-source-project-validator/SKILL.md) | Validation | Evaluate open-source ideas for utility, adoption, and maintainability. |
