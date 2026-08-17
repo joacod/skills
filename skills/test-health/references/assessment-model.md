@@ -115,14 +115,19 @@ assessment into a broad architecture migration.
 
 ## Stopping rule
 
-Stop when the selected pass has:
+Stop when the selected slice has:
 
-- one clear risk or behavior,
-- one appropriate seam and test level,
-- a bounded implementation scope,
-- a reliable verification command,
-- concrete completion criteria, and
+- one clear primary risk or behavior;
+- one appropriate main seam and test level;
+- the supporting setup and related scenarios needed to make its signal
+  trustworthy;
+- a bounded implementation scope that does not cross into an independent
+  risk;
+- a reliable verification command;
+- concrete completion criteria; and
 - enough evidence to explain why it is more valuable than the alternatives.
 
-Do not continue to enumerate gaps after marginal value becomes low. “Good
-enough for now” is a valid outcome.
+Do not stop merely because the first test passes if a closely related outcome
+is needed to close the same risk. Conversely, do not continue to enumerate gaps
+after the slice is trustworthy and marginal value becomes low. “Good enough for
+now” is a valid outcome.

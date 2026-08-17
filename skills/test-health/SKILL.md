@@ -1,8 +1,8 @@
 ---
 name: test-health
 description: >
-  Audit a repository's automated testing health and recommend the smallest
-  high-value next improvement. Use when assessing an existing test suite,
+  Audit a repository's automated testing health and recommend a bounded,
+  high-value next improvement slice. Use when assessing an existing test suite,
   introducing tests into an untested or legacy project, deciding what to test
   next, evaluating testing strategy or coverage, choosing between unit,
   integration, and end-to-end tests, investigating brittle or flaky tests, or
@@ -14,12 +14,17 @@ description: >
 # Test health
 
 Analyze the repository's current ability to detect important regressions, then
-choose one improvement that makes future changes safer. Optimize for confidence
-and risk reduction—not test count, line coverage, or testing activity.
+choose one bounded improvement slice that makes future changes safer. Optimize
+for confidence and risk reduction—not test count, line coverage, or testing
+activity.
 
-This skill is a repository assessment and incremental-improvement playbook. It
-is not a mandate to use TDD everywhere, add tests for every file, migrate the
-testing stack, or make the repository fully tested in one run.
+A slice has one primary risk or behavior, one main seam or test level, and the
+supporting setup and related scenarios needed to make the signal trustworthy.
+It is intentionally larger than a token one-test change when the evidence calls
+for it, but smaller than a broad testing campaign. This skill is a repository
+assessment and incremental-improvement playbook. It is not a mandate to use
+TDD everywhere, add tests for every file, migrate the testing stack, or make the
+repository fully tested in one run.
 
 ## Principles
 
@@ -27,8 +32,11 @@ Apply these principles directly:
 
 - Treat coverage and test count as evidence, never as objectives. Do not set
   arbitrary percentages or pursue 100% coverage by default.
-- Prefer one coherent improvement pass. Stop when its evidence is sufficient;
-  do not attempt to improve every testing weakness at once.
+- Prefer one coherent improvement slice per iteration: one risk area or
+  behavior boundary with enough supporting setup and related scenarios to make
+  it usable. Do not stop at an isolated test when a small companion check,
+  fixture, seam, or command is needed to close the same risk, but do not expand
+  into an independent risk area.
 - Prioritize important, risky, frequently changed, or historically buggy
   behavior over uncovered but unimportant lines.
 - Test externally observable behavior through a stable interface or seam. Do
@@ -91,21 +99,26 @@ Follow this sequence. Gather evidence before choosing a recommendation.
    **Strong enough**. Base the state on executability, risk coverage, test
    quality, reliability, test-level fit, architectural testability, and change
    protection—not on a numeric score.
-9. **Choose exactly one pass.** Compare candidate improvements by risk reduced,
-   confidence gained, implementation effort, maintenance cost, architectural
-   prerequisites, and feedback speed. Select the smallest high-value pass:
-   test-first, characterization-first, architecture-first with a minimal seam,
-   reliability/stability, CI/infrastructure, or no work for now. Explain why it
-   wins over obvious alternatives and define concrete completion criteria.
-10. **Stop.** Keep later ideas to at most three brief follow-ups. Do not add
-    tests solely to inflate metrics, introduce a second framework without a
-    concrete reason, favor E2E merely because it is realistic, or favor unit
-    tests merely because they are fast.
+9. **Choose one bounded improvement slice.** Compare candidate slices by risk
+   reduced, confidence gained, implementation effort, maintenance cost,
+   architectural prerequisites, and feedback speed. Select one primary behavior
+   or risk at one seam/test level, then include only the directly enabling work
+   and closely related scenarios needed to make that slice trustworthy. A slice
+   may include a small cluster of tests, fixture or runner setup, a minimal
+   seam, or focused CI wiring; it is larger than an isolated test when the
+   evidence calls for it, but smaller than a broad testing campaign. Define
+   what is explicitly out of scope before implementation.
+10. **Stop at the slice boundary.** Finish when the primary risk has the
+    planned behavioral evidence and the relevant checks pass. Defer a second
+    independent risk, even if it appears nearby. Keep later ideas to at most
+    three brief, ordered follow-ups. Do not add tests solely to inflate metrics,
+    introduce a second framework without a concrete reason, favor E2E merely
+    because it is realistic, or favor unit tests merely because they are fast.
 
 For detailed guidance, load only what is needed:
 
 - [Maturity and evidence](references/assessment-model.md)
-- [Prioritization and pass selection](references/prioritization.md)
+- [Prioritization and bounded slice selection](references/prioritization.md)
 - [Test quality and test-level fit](references/test-quality.md)
 - [Ecosystem detection](references/ecosystem-detection.md)
 - [Final report format](references/report-format.md)
@@ -114,45 +127,58 @@ For detailed guidance, load only what is needed:
 
 Use repository evidence to choose among these common cases:
 
-- **A meaningful seam exists:** test through it; do not refactor for testability
-  merely because another design would be easier to test.
-- **Behavior is poorly understood:** characterize important current behavior
+- **A meaningful seam exists:** protect the primary behavior through it. Include
+  the key success, failure, or boundary outcomes that belong to the same risk;
+  do not refactor for testability merely because another design would be easier
+  to test.
+- **Behavior is poorly understood:** characterize a meaningful current slice
   before changing it. Do not silently replace undocumented behavior with an
   imagined ideal.
 - **Setup requires excessive mocking or invasive manipulation:** identify the
   one dependency or boundary that blocks useful observation and expose the
-  smallest seam there. Avoid broad dependency-injection, repository-pattern,
-  or architecture migrations.
-- **No testing infrastructure exists:** establish only a minimum foothold using
-  the ecosystem's natural tool, one clear command, and one meaningful
-  behavioral test. Stop after verifying it runs.
+  smallest seam there, then add the related behavioral checks needed to prove
+  that seam. Avoid broad dependency-injection, repository-pattern, or
+  architecture migrations.
+- **No testing infrastructure exists:** establish a minimum foothold using the
+  ecosystem's natural tool, one clear command, and a small representative
+  behavioral slice. Include enough scenarios to exercise the important branch
+  or boundary; do not create a complete unit/integration/E2E stack.
 - **The suite is flaky, unreliable, or painfully slow:** restore trust in the
-  highest-value feedback before increasing suite size.
+  highest-value feedback, including adjacent setup or guard checks when they
+  are part of the same failure, before increasing suite size.
+- **CI does not run valuable local tests:** wire the existing focused command
+  into the normal change path and make its failure visible; do not introduce a
+  new framework or rebuild the whole pipeline in the same iteration.
 - **Testing is already strong:** say **Good enough for now** unless a specific
-  additional improvement clearly justifies its cost.
+  additional slice clearly justifies its cost.
 
 Do not equate a passing suite with meaningful protection, a large suite with
 maturity, or high coverage with quality. Do not write tests for every source
 file merely because it exists, target a coverage number, use snapshots as a
 cheap coverage mechanism, or broadly refactor unprotected code just for
-idealized testability.
+idealized testability. A few related scenarios that close one risk are part of
+one manageable slice; unrelated gaps belong in later iterations.
 
 ## Implementation mode
 
 If the user asks to implement the recommendation, first confirm the existing
-conventions and implement only that one pass. Keep the change behavior-focused
-and avoid unrelated cleanup.
+conventions and implement only that bounded slice. The slice may include a
+minimal seam, fixture/helper, focused command or CI wiring, and a small related
+set of tests when those pieces are inseparable from the observable boundary.
+Keep the change behavior-focused and avoid unrelated cleanup.
 
 After implementation:
 
-1. Run the new or changed tests and verify their output freshly.
+1. Run the new or changed tests and verify the planned scenarios freshly.
 2. Run the relevant broader suite and normal lint, typecheck, build, or
    packaging checks when reasonably practical.
 3. Confirm the intended behavior is protected at the selected seam. When
-   useful, demonstrate that the test fails if the protected behavior is
+   useful, demonstrate that the tests fail if the protected behavior is
    intentionally broken; do not claim this if it was not checked.
-4. Reassess the affected risk and report the actual commands and results.
-5. Recommend at most one next improvement, or say **Good enough for now**.
+4. Reassess the affected risk, confirm the slice stayed within its boundary,
+   and report the actual commands and results.
+5. Recommend no more than three short, ordered follow-ups, or say **Good enough
+   for now**. Do not turn follow-ups into an unbounded backlog.
 
 ## Default report
 
@@ -166,7 +192,13 @@ Use the concise structure in [report-format.md](references/report-format.md):
 
 ## What I found
 ## Biggest current risk
-## Recommended pass
+## Recommended iteration
+
+**Primary risk or behavior:**
+**Seam and test level:**
+**Bounded slice:**
+**Explicitly out of scope:**
+
 ## Why this first
 ## Done when
 ## Later

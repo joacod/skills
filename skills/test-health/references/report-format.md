@@ -22,25 +22,29 @@ omit empty sections only when the user does not need them.
 
 <Describe one important weakness, with file, symbol, command, or CI evidence.>
 
-## Recommended pass
+## Recommended iteration
 
-<Recommend exactly one coherent pass. State the seam and test level when
-relevant. State what is explicitly out of scope.>
+**Primary risk or behavior:** <one risk or behavior>
+**Seam and test level:** <where and how confidence will be observed>
+**Bounded slice:** <primary change plus directly enabling setup and related scenarios>
+**Explicitly out of scope:** <independent risks, broad cleanup, or migrations left for later>
 
 ## Why this first
 
-<Explain why this reduces more meaningful risk than the obvious alternatives.>
+<Explain why this slice reduces more meaningful risk than the obvious
+alternatives.>
 
 ## Done when
 
-- <observable behavior is protected or the reliability/CI defect is repaired>
+- <the primary behavior and its key related outcomes are protected, or the reliability/CI defect is repaired>
 - <the relevant command passes reliably>
 - <CI executes it when in scope>
 - <no unnecessary framework, coverage target, or architecture migration was added>
+- <the final change stays within the selected slice>
 
 ## Later
 
-- <at most three short follow-ups, or “Good enough for now.”>
+- <at most three short, ordered follow-ups, or “Good enough for now.”>
 ```
 
 ## Wording guidance
@@ -66,9 +70,10 @@ included as supporting facts, but never as the objective or the recommendation.
 
 The repository has a Python manifest and a `tests/` directory, but no runnable
 test command is documented, no test files contain assertions, and CI does not
-invoke a test runner. The smallest valuable pass is to establish the existing
-ecosystem's runner and add one test around the public command's important
-invalid-input behavior—not to create a full testing pyramid.
+invoke a test runner. The smallest valuable slice is to establish the existing
+ecosystem's runner and protect the public command's important invalid-input
+boundary with a small representative set of scenarios—not to create a full
+testing pyramid.
 
 ## Example: partial safety net
 
@@ -77,10 +82,10 @@ invalid-input behavior—not to create a full testing pyramid.
 
 The existing suite runs in CI and protects pure pricing rules, but sampled
 checkout tests mock the application collaborators and no test crosses the
-persistence/payment seam. The next pass is one targeted integration test for a
-successful checkout and its failure outcome, reusing the existing test
-database or boundary fixture. Do not add more utility tests or set a coverage
- target in this pass.
+persistence/payment seam. The next slice is one targeted integration boundary
+covering a successful checkout and its important failure outcome, reusing the
+existing test database or boundary fixture. Do not add more utility tests or
+set a coverage target in this slice.
 
 ## Example: strong enough
 
