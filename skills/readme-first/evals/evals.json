@@ -1,0 +1,44 @@
+{
+  "skill_name": "readme-first",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create the main README for this repository from the existing codebase. Make it useful to a new visitor in about 60 seconds, derive the quick start from the actual project files, and do not invent commands or placeholder links.",
+      "expected_output": "A concise repository README with a concrete value proposition, project-appropriate features, a verified happy path, one representative example, and links only to real deeper documentation.",
+      "files": [],
+      "expectations": [
+        "The README is based on repository evidence rather than a generic template.",
+        "The opening communicates what the project does and who benefits from it.",
+        "Quick Start uses real, copy-pasteable commands from the repository.",
+        "The README includes one current representative usage example.",
+        "Unsupported claims, fake links, and unnecessary template sections are absent."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Improve this repository's existing main README. Preserve accurate project identity and useful voice, but fix stale setup instructions, bring the value proposition and Quick Start forward, remove implementation-heavy or duplicate material, and link to existing deeper docs instead of expanding the README.",
+      "expected_output": "A targeted rewrite that preserves useful existing material while correcting repository mismatches, improving scanability and onboarding, and reducing deep documentation in the main README.",
+      "files": [],
+      "expectations": [
+        "Existing accurate terminology, examples, visuals, and project-specific context are preserved when useful.",
+        "Documented setup commands and claims are cross-checked against current repository truth.",
+        "The value proposition and one obvious happy path are easier to find.",
+        "Deep architecture, reference, and contributor material is linked or removed rather than duplicated.",
+        "The final README is shorter or clearer without losing essential onboarding information."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Review the repository's main README for onboarding quality without modifying any files. Prioritize findings by impact and cite concrete repository evidence for inaccurate commands, missing prerequisites, weak examples, poor information hierarchy, or unnecessary depth.",
+      "expected_output": "A read-only, evidence-based audit focused on comprehension, 60-second onboarding, factual accuracy, scanability, examples, progressive disclosure, tone, and scope.",
+      "files": [],
+      "expectations": [
+        "No repository files are modified.",
+        "Findings are prioritized by user impact rather than presented as generic style advice.",
+        "Command or fact concerns cite the manifest, scripts, source, docs, or other repository evidence.",
+        "The review covers value proposition, Quick Start, accuracy, examples, scope, and progressive disclosure.",
+        "The review avoids numeric scoring unless explicitly requested."
+      ]
+    }
+  ]
+}
