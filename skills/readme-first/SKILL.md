@@ -35,7 +35,7 @@ Follow this pipeline; do not begin with a universal template:
 **inspect → classify → establish facts → prioritize → write → verify → trim**
 
 1. **Inspect.** Read [repo-inspection.md](references/repo-inspection.md) before
-   creating or substantially changing the README. Inspect only repository
+   any nontrivial Create, Improve, or Review task. Inspect only repository
    evidence needed to describe the user experience: manifests and lockfiles,
    scripts and task runners, entrypoints and exports, CLI definitions, examples,
    tests that reveal usage, CI, assets, supporting docs, license, contribution
@@ -61,10 +61,12 @@ Follow this pipeline; do not begin with a universal template:
    key, link, and claim against repository evidence. When safe and practical,
    execute the primary happy path locally. Do not claim a command was tested
    when only static inspection was possible. Review mode must not modify files.
-7. **Trim.** Read [quality-checklist.md](references/quality-checklist.md), fix
-   every material finding, and re-read the result as a stranger. Remove
-   duplication, ceremony, mechanism-heavy prose, exhaustive reference material,
-   and anything that does not help a new or prospective user decide or start.
+7. **Trim.** Read [quality-checklist.md](references/quality-checklist.md). In
+   Create and Improve, fix every material finding and re-read the result as a
+   stranger. In Review, use the checklist to organize prioritized findings
+   without editing. Remove duplication, ceremony, mechanism-heavy prose,
+   exhaustive reference material, and anything that does not help a new or
+   prospective user decide or start.
 
 ## Mode-specific behavior
 

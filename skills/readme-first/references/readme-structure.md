@@ -34,10 +34,12 @@ Select the sections that help a visitor decide and get a first result. A common
 order is:
 
 1. **Why / Overview / Problem** — only when the one-liner needs context;
-2. **Features / Benefits** — user-visible outcomes, not internal components;
-3. **Quick Start** — the shortest realistic supported path;
-4. **Usage / Examples** — one representative happy-path example;
-5. **Install or prerequisites** — separate these only when the project needs
+2. **When to Use / Not For** — only when readers need help self-selecting or
+   distinguishing this project from adjacent options;
+3. **Features / Benefits** — user-visible outcomes, not internal components;
+4. **Quick Start** — the shortest realistic supported path;
+5. **Usage / Examples** — one representative happy-path example;
+6. **Install or prerequisites** — separate these only when the project needs
    setup detail that would make Quick Start hard to scan.
 
 The headings may change by project type. Do not add a section when it answers

@@ -25,6 +25,8 @@ editing. Do not publish a numeric score unless the user requests one.
       next action when execution cannot be shown in the README.
 - [ ] The normal usage example is the smallest representative example and does
       not make the reader choose among unnecessary variants.
+- [ ] Examples are identified as verified runs or sample flows; unobserved
+      output is never presented as if it came from an execution.
 
 ## Repository accuracy and developer experience
 
