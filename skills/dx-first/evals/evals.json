@@ -1,0 +1,44 @@
+{
+  "skill_name": "dx-first",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Audit this Python service's developer experience. Start from the repository evidence, trace clone through a small validated change, test safe commands where practical, and give me prioritized findings without modifying files or assigning a numeric score.",
+      "expected_output": "An evidence-first, read-only DX audit that classifies the service, traces the first contribution loop, distinguishes tested from static or inferred evidence, and prioritizes concrete friction by impact and frequency.",
+      "files": [],
+      "expectations": [
+        "The audit begins with repository reconnaissance and project classification rather than a generic tooling checklist.",
+        "The report traces clone, setup, run, change, and validation with concrete commands or artifacts.",
+        "Meaningful findings include evidence, impact, frequency or scope, effort, confidence, and TESTED, VERIFIED, or INFERRED method.",
+        "The audit remains read-only and does not recommend a tool solely because it is popular.",
+        "The report avoids a numeric DX score unless requested."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Improve this repository's development workflow. The README says to use npm, CI uses pnpm, contributors cannot run one focused test easily, and the setup docs are stale. Make the smallest coherent implementation, preserve the repository's ecosystem, update affected docs, and verify the journey afterward.",
+      "expected_output": "A focused implementation that removes contradictory workflow guidance, exposes or documents a reliable targeted check using existing tooling, updates only affected documentation, and reruns relevant validation without adding unnecessary wrappers.",
+      "files": [],
+      "expectations": [
+        "The agent verifies the repository's actual package manager and commands before editing.",
+        "The implementation prefers existing native tooling and removes or reconciles conflicting paths instead of adding a new task runner.",
+        "A focused validation path is made discoverable without replacing broader confidence checks.",
+        "Changed documentation is checked against the implemented commands.",
+        "The final report states what workflow was rerun and distinguishes verified results from skipped checks."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Review a proposal to add a devcontainer, Makefile, pre-commit hook, and a second task runner to a small Go repository because its developer experience feels inconsistent. Evaluate the proposal through a DX guard lens and recommend what to keep, simplify, or reject based on observed friction.",
+      "expected_output": "A guard review that tests whether each addition removes concrete recurring friction, favors simplifying the existing Go workflow, and identifies the smallest supported paved path with explicit evidence and confidence.",
+      "files": [],
+      "expectations": [
+        "The review does not treat missing devcontainers or task runners as defects by themselves.",
+        "Each proposed mechanism is evaluated for removed friction, frequency, cognitive cost, ownership, and maintenance burden.",
+        "The recommendation prefers one coherent command path and sensible defaults with escape hatches.",
+        "The review identifies risks of slower feedback, extra setup, local/CI divergence, or harder failures.",
+        "The review distinguishes repository evidence from assumptions and does not expand into an unrelated code-quality audit."
+      ]
+    }
+  ]
+}
