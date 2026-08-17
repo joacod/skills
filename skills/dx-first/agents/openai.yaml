@@ -1,0 +1,4 @@
+interface:
+  display_name: "DX First"
+  short_description: "Audit and improve developer experience across software repositories."
+  default_prompt: "Use $dx-first to audit, improve, or guard this repository's developer experience."

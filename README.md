@@ -16,6 +16,7 @@ npx skills add https://github.com/joacod/skills --skill <skill-name>
 | --- | --- | --- |
 | [`secure-node-typescript`](skills/secure-node-typescript/SKILL.md) | Engineering | Build and review secure Node.js and TypeScript applications. |
 | [`refactor-design-patterns`](skills/refactor-design-patterns/SKILL.md) | Engineering | Decide when a design pattern helps and refactor toward it incrementally. |
+| [`dx-first`](skills/dx-first/SKILL.md) | Engineering | Audit, improve, and protect developer experience across software repositories. |
 | [`react-anti-patterns`](skills/react-anti-patterns/SKILL.md) | Engineering | Create realistic React mistakes for training, review, and teaching. |
 | [`ui-design-token-refactor`](skills/ui-design-token-refactor/SKILL.md) | Engineering | Refactor CSS or Tailwind styling into an accessible token-based system. |
 | [`business-idea-validator`](skills/business-idea-validator/SKILL.md) | Validation | Pressure-test business ideas with evidence and practical experiments. |
