@@ -6,7 +6,8 @@ description: >
   onboarding, development setup, local development, developer tooling,
   build/test feedback, task ergonomics, confusing commands, CI/local workflow
   friction, codebase discoverability, reproducible environments, development
-  workflows, or repository usability, even when they do not use the term DX.
+  workflows, repository usability, or reviewing plans and changes that affect
+  developer workflows, even when they do not use the term DX.
 ---
 
 # DX First
