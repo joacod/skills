@@ -6,8 +6,11 @@ what a visitor can actually install, run, and use.
 
 ## Inspect in a focused order
 
-Start at the repository root and current `README.md`, then inspect the smallest
-set of relevant sources:
+Start at the repository root and current `README.md`. Confirm which README the
+hosting platform and repository convention treat as the main user-facing entry
+point; normally use the root file and do not substitute a profile, locale, or
+arbitrary documentation README. Then inspect the smallest set of relevant
+sources:
 
 1. **Project identity and package metadata** — `package.json`, `pyproject.toml`,
    `Cargo.toml`, `go.mod`, `pom.xml`, `*.csproj`, gemspecs, or equivalent

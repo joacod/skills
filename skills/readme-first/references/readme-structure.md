@@ -48,9 +48,12 @@ no important reader question.
 Keep this area compact. Use short descriptions and links to existing canonical
 resources for configuration, full API or CLI reference, architecture, advanced
 examples, troubleshooting, development, contributing, security, releases, and
-license details. A short license statement and a concise contribution link may
-remain inline. Deep material belongs in `docs/` or another established home,
-not copied into the main README.
+license details. Show only the configuration needed for the basic happy path;
+link the complete configuration reference. Demonstrate only enough API or CLI
+surface for normal use, and link exhaustive reference material. A short license
+statement and a concise contribution or support link may remain inline. Deep
+material belongs in `docs/` or another established home, not copied into the
+main README.
 
 Use GitHub's rendered outline instead of a manual table of contents by default.
 Add a table of contents only when the final README is long or genuinely complex
