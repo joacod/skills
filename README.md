@@ -20,3 +20,4 @@ npx skills add https://github.com/joacod/skills --skill <skill-name>
 | [`ui-design-token-refactor`](skills/ui-design-token-refactor/SKILL.md) | Engineering | Refactor CSS or Tailwind styling into an accessible token-based system. |
 | [`business-idea-validator`](skills/business-idea-validator/SKILL.md) | Validation | Pressure-test business ideas with evidence and practical experiments. |
 | [`open-source-project-validator`](skills/open-source-project-validator/SKILL.md) | Validation | Evaluate open-source ideas for utility, adoption, and maintainability. |
+| [`readme-first`](skills/readme-first/SKILL.md) | Documentation | Create, improve, and review excellent main repository READMEs. |

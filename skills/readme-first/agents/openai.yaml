@@ -1,0 +1,4 @@
+interface:
+  display_name: "README First"
+  short_description: "Create, improve, and review accurate main repository READMEs."
+  default_prompt: "Use $readme-first to create, improve, or review this repository's main README."
