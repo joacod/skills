@@ -33,3 +33,4 @@ npx skills add https://github.com/joacod/skills --skill <skill-name>
 | Skill | Use it to |
 | --- | --- |
 | [`readme-first`](skills/readme-first/SKILL.md) | Create, improve, and review excellent main repository READMEs. |
+| [`markdown-quality`](skills/markdown-quality/SKILL.md) | Improve repository Markdown across docs, guides, references, templates, and other document roles. |
