@@ -1,0 +1,42 @@
+{
+  "skill_name": "markdown-quality",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Audit and improve the repository's Markdown documentation as a coherent set. Infer the role and renderer of each document family, keep the root README onboarding-focused, preserve machine-facing instruction files and generated sections, and make only changes that improve reader value or reduce recurring inconsistency. Verify links, headings, code fences, tables, and any repository-native documentation checks.",
+      "expected_output": "A bounded repo-wide Markdown improvement that classifies document families before editing, preserves role-specific conventions and machine-facing semantics, applies useful structural and accessibility fixes, and reports evidence-backed validation without mass reformatting.",
+      "files": [],
+      "expectations": [
+        "The work distinguishes the root README from non-README documentation instead of applying a universal template.",
+        "The agent identifies renderer or dialect evidence before introducing Markdown extensions or changing existing syntax.",
+        "Generated, vendored, archived, or machine-facing Markdown is excluded or changed only with explicit evidence.",
+        "The changes improve headings, links, examples, tables, images, or readability based on concrete findings rather than cosmetic churn.",
+        "Validation distinguishes executed checks from static inspection, unavailable tooling, and skipped checks."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Improve a documentation repository's guides, API reference pages, ADRs, and changelog for consistency and accessibility. Do not flatten them into one template: preserve the purpose and history of each role, use descriptive links and useful heading structure, keep code examples accurate, and use tables, task lists, alerts, or footnotes only when the target renderer supports them and they help the reader.",
+      "expected_output": "A role-aware documentation pass with targeted, renderer-compatible edits that improve navigation and accessibility while preserving API accuracy, ADR history, changelog chronology, and project-specific voice.",
+      "files": [],
+      "expectations": [
+        "Guides, references, ADRs, and changelogs receive different quality criteria appropriate to their roles.",
+        "The agent avoids inventing facts, commands, output, links, or compatibility claims.",
+        "Markdown features are selected deliberately with renderer compatibility and accessibility considered.",
+        "The final report names material changes, preserved boundaries, and remaining evidence gaps."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Review the repository's Markdown quality without modifying files. Prioritize actionable findings for broken or misleading content, heading hierarchy, link and anchor usability, code examples, tables, image alt text, accessibility, renderer compatibility, and unnecessary formatting churn. Cite the affected file and section and explain why each finding matters.",
+      "expected_output": "A read-only, prioritized Markdown review grounded in repository and renderer evidence, with concrete file or section references and no edits or numeric score unless requested.",
+      "files": [],
+      "expectations": [
+        "No repository files are modified.",
+        "Findings are prioritized by reader impact and evidence rather than generic Markdown advice.",
+        "The review covers semantics, structure, navigation, examples, accessibility, and renderer compatibility where applicable.",
+        "The report distinguishes confirmed problems from assumptions or unavailable validation."
+      ]
+    }
+  ]
+}
