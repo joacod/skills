@@ -34,3 +34,10 @@ npx skills add https://github.com/joacod/skills --skill <skill-name>
 | --- | --- |
 | [`readme-first`](skills/readme-first/SKILL.md) | Create, improve, and review excellent main repository READMEs. |
 | [`markdown-quality`](skills/markdown-quality/SKILL.md) | Improve repository Markdown across docs, guides, references, templates, and other document roles. |
+
+
+## Prompt transformation
+
+| Skill | Use it to |
+| --- | --- |
+| [`rant-coding`](skills/rant-coding/SKILL.md) | Run coding or agent prompts through a sharp, profanity-heavy rewrite; `/rant-coding --prompt-only` returns the rewrite without executing it. |
