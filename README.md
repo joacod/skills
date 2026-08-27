@@ -41,3 +41,9 @@ npx skills add https://github.com/joacod/skills --skill <skill-name>
 | Skill | Use it to |
 | --- | --- |
 | [`rant-coding`](skills/rant-coding/SKILL.md) | Run coding or agent prompts through a sharp, profanity-heavy rewrite; `/rant-coding --prompt-only` returns the rewrite without executing it. |
+
+## Git workflow
+
+| Skill | Use it to |
+| --- | --- |
+| [`ticket-to-pr`](skills/ticket-to-pr/SKILL.md) | Run the explicit `/ticket-to-pr <ticket>` flow: branch, sensible commits, push, and pull request. |
