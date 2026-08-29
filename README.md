@@ -46,4 +46,4 @@ npx skills add https://github.com/joacod/skills --skill <skill-name>
 
 | Skill | Use it to |
 | --- | --- |
-| [`ticket-to-pr`](skills/ticket-to-pr/SKILL.md) | Run the explicit `/ticket-to-pr <ticket>` flow: branch, sensible commits, push, and pull request. |
+| [`ticket-to-pr`](skills/ticket-to-pr/SKILL.md) | Run the explicit ticket-to-PR flow through the host harness's native skill command, passing the ticket as its arguments. |

@@ -1,26 +1,33 @@
 ---
 name: ticket-to-pr
 description: >
-  Explicit-invocation-only wrapper for the literal `/ticket-to-pr <ticket>`
-  command. Never activate for ordinary coding, ticket, branch, commit, push, or
-  pull-request requests, even when they describe the same work. When that exact
-  command is invoked, treat everything after `/ticket-to-pr` as the ticket,
-  create a ticket branch, let the active harness implement it normally, make
-  sensible commits, push the branch, create a GitHub pull request with `gh`,
-  report its URL, and stop.
+  Explicit-only workflow for turning one coding ticket into a reviewable GitHub
+  pull request: create a ticket branch, implement the work, make sensible
+  commits, push the branch, and open the pull request with `gh`. Invoke this
+  skill through your agent harness's native skill-command mechanism, passing the
+  ticket as its arguments. Do not use it for ordinary coding, branch, commit,
+  push, or pull-request requests without explicit invocation.
+user-invocable: true
+disable-model-invocation: true
 ---
 
 # Ticket to PR
 
 ## Activation
 
-Run these instructions only when the user's actual invocation is the literal
-`/ticket-to-pr <ticket>`. Do not infer invocation from intent or wording. If the
-literal command is absent, decline this skill immediately and do not create or
-modify branches, commits, pushes, or pull requests.
+This is an explicit, opt-in workflow. Invoke `ticket-to-pr` through the
+harness's native skill-command mechanism and pass one ticket as its arguments.
+Skill command syntax is host-specific; this skill does not assume or define a
+portable slash or sigil prefix.
 
-Treat everything after `/ticket-to-pr` as the ticket. Keep this skill active for
-that ticket only until its pull request is created.
+When the harness expands the command, it supplies the invocation arguments
+alongside this skill. Treat those supplied arguments as the ticket and
+proceed—do not require the original command text to still be present.
+
+Do not infer invocation from intent or wording. If this skill was not explicitly
+invoked, do not create or modify branches, commits, pushes, or pull requests.
+
+Keep this skill active for that ticket only until its pull request is created.
 
 ## Branch
 
