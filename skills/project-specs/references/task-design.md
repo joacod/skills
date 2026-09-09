@@ -4,12 +4,17 @@ Load this when writing `04-version-roadmap.md` or `05-implementation-tasks.md`.
 
 The destination is a sequence of meaningful implementations, not a miniature of
 the final system in every early version. Optimize early versions for
-**learning value + tangible output**.
+**learning value + tangible output**. The package still has to name the last
+form and the versions that get there.
 
 ## Version roadmap
 
 Do not force a numbering scheme. Choose versions that make sense for the
 project. A common shape is `V0`, `V0.1`, `V0.2`, `V1`, `V2`, desired state.
+
+Write the **entire** progression: first useful version through the desired last
+form. The last version is the destination from `README.md` and
+`02-product-and-experience.md`, not an optional epilogue.
 
 Each version must produce something observable, usable, or informative. V0 is
 not "a tiny version of every final feature." It is the smallest implementation
@@ -18,9 +23,13 @@ or inspect.
 
 ### Confidence by distance
 
-- **V0:** high confidence, detailed.
-- **Immediately following versions:** medium-high detail.
-- **Far future versions:** directional.
+- **Current near-term version (V0 on create):** high confidence, detailed,
+  fully task-split.
+- **Immediately following versions:** medium-high detail. Enough that a later
+  update pass can decompose them without the original brainstorm.
+- **Far future versions, including the desired last form:** directional, but
+  specific about capability and experience. Do not replace them with "TBD" or
+  omit them.
 
 Do not write dozens of implementation tasks for speculative later versions.
 Early implementation is allowed to change later architecture. The roadmap is a
@@ -81,11 +90,20 @@ Which later assumptions or versions might change based on the result.
 
 ## Implementation tasks
 
-Translate only near-term roadmap versions into concrete tasks. V0 should be
-thoroughly decomposed. The next version can be reasonably detailed. Far-future
-versions normally stay at roadmap level.
+Translate only the **current near-term** roadmap version into concrete tasks.
+On create that is V0. On update, after V0 (or the just-finished version) is
+done, that is the next incomplete version.
 
-Use IDs such as `V0-T01`.
+The immediately following version may stay at medium-high roadmap detail until
+it becomes current. Far-future versions, including the desired last form,
+normally stay at roadmap level until then.
+
+Use IDs such as `V0-T01`, then `V0.1-T01` or `V1-T01` when that version becomes
+current.
+
+Write each current-version task so an agent who never saw the brainstorm can
+complete it from the task plus the spec files it cites. Include the context,
+paths, constraints, and verification that would otherwise live only in chat.
 
 ### Per-task sections
 
@@ -149,16 +167,23 @@ Prefer specific steps:
 Tasks should minimize architectural inference without prescribing every line of
 code.
 
-Every V0 task should contribute directly to V0. V0 must not secretly require
-V1 infrastructure.
+Every current-version task should contribute directly to that version. V0 must
+not secretly require later-version infrastructure.
 
 ## Update behavior
 
-When reconciling an existing spec with implementation:
+When reconciling an existing spec with implementation, including after a
+version or experiment lands:
 
 - Mark completed tasks and versions as completed.
 - Keep their original intent visible; add what actually shipped.
 - Move invalidated future work rather than pretending it was never planned.
-- Split, merge, or rewrite only incomplete near-term tasks.
+- Re-read each completed version's expected learnings and possible roadmap
+  impact; change later versions when the result warrants it.
+- Keep the desired last form unless the new evidence changes it; if it
+  changes, say so in the brief, product doc, and last roadmap version.
+- Split, merge, or rewrite incomplete tasks for the **new** current version
+  with the same thoroughness V0 originally received.
+- Leave still-distant versions at roadmap level.
 - Record assumption changes in `STATUS.md` and in the relevant decision or
   question entries.

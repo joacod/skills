@@ -1,39 +1,46 @@
 ---
 name: project-specs
 description: >
-  Turn a finished brainstorm into a durable pre-implementation specification in
-  the current repository: project brief, research catalog, architecture with
-  confidence labels, version roadmap, V0 tasks, and an agent handoff. Use when
-  the user wants to spec a project or experiment before coding, prepare pre-v0
-  docs, create an implementation roadmap from a brainstorm, document a project
-  so another agent can implement it incrementally, finish brainstorming and
-  write the docs, or make the project plan and V0 tasks. Also use when
-  exploration has clearly ended and the next step is organizing everything
-  needed before implementation. Do not use for ordinary planning questions,
-  small coding tasks, starting implementation, writing the main README, or
-  general Markdown cleanup. Write or update docs/project-slug/ and stop before
-  building.
+  Turn a finished brainstorm into a durable product specification in the
+  current repository: desired end state, research catalog, architecture with
+  confidence labels, the full version roadmap, near-term implementation tasks,
+  and an agent handoff. Use when the user wants to spec a project or experiment
+  before coding, prepare pre-v0 docs, create an implementation roadmap from a
+  brainstorm, document a project so another agent can implement it
+  incrementally, finish brainstorming and write the docs, or make the project
+  plan and V0 tasks. Also use after a version, task, or experiment lands to
+  update STATUS, learnings, the roadmap, and the next near-term tasks from what
+  was learned. Also use when exploration has clearly ended and the next step is
+  organizing everything needed before implementation. Do not use for ordinary
+  planning questions, small coding tasks, starting implementation, writing the
+  main README, or general Markdown cleanup. Write or update docs/project-slug/
+  and stop before building.
 ---
 
 # Project Specs
 
-Capture a finished exploration as a durable implementation package inside the
-repository. The package should be strong enough to review before building,
-re-enter weeks later, and hand near-term tasks to a capable but less intelligent
-coding model.
+Capture a finished exploration as a durable, living implementation package
+inside the repository. The package must hold the desired last form of the
+product, the full version roadmap toward that destination, and enough context
+that an agent who never saw the brainstorm can implement the current slice and
+later continue after the spec is updated.
 
-This skill is the step immediately before V0:
+This skill is the step immediately before implementation, and the spec refresh
+after each meaningful step:
 
-**brainstorm → project specification → version roadmap → executable tasks → V0**
+**brainstorm → specification → version roadmap → executable near-term tasks →
+implement → update spec → next version**
 
 It does not implement the project.
 
 ## Choose the mode
 
-- **Create** when no project specification package exists yet.
-- **Update** when a matching package already exists. Read it first and follow
-  the update behavior in [spec-structure.md](references/spec-structure.md).
-  Implementation reality wins over outdated planning assumptions.
+- **Create** when no project specification package exists yet. Write the
+  destination, the whole roadmap, and executable tasks for the first version.
+- **Update** when a matching package already exists, including after a version,
+  task, or experiment landed. Read it first and follow the update behavior in
+  [spec-structure.md](references/spec-structure.md). Implementation reality
+  wins over outdated planning assumptions.
 
 If the request is only a small coding task, an ordinary design question, a main
 README rewrite, or general Markdown cleanup, do not use this skill.
@@ -63,9 +70,10 @@ Follow this pipeline; do not begin by filling a template:
 5. **Specify.** Read [spec-structure.md](references/spec-structure.md). Create or
    update the project directory. Prefer an established repository documentation
    convention when one already exists; otherwise use `docs/<project-slug>/`.
-6. **Decompose.** Read [task-design.md](references/task-design.md). Turn the
-   destination into versions with observable outcomes. Thoroughly task-split
-   only near-term versions, especially V0. Keep far-future versions directional.
+6. **Decompose.** Read [task-design.md](references/task-design.md). Write the
+   full version sequence through the desired last form. Thoroughly task-split
+   the current near-term version (V0 on create; the next incomplete version on
+   update). Keep far-future versions directional, but present.
 7. **Review.** Read [quality-checklist.md](references/quality-checklist.md) and
    fix inconsistencies before finishing.
 8. **Summarize, then stop.** Return the compact handoff below. Do not start V0,
@@ -89,6 +97,9 @@ Follow this pipeline; do not begin by filling a template:
   one global specification.
 - Omit a spec file only when it genuinely does not apply, and say why in
   `README.md`'s documentation map.
+- Do not write a V0 ticket dump with no destination. A later agent must be
+  able to see what the product is for, what the mature system should feel
+  like, and which versions remain after the current one.
 
 ## Final response
 
@@ -96,11 +107,11 @@ After writing or updating the package, do not begin building. Reply with:
 
 1. **Interpretation** of the project
 2. **Documentation path**
-3. **Version progression**
-4. **Chosen V0 and why**
+3. **Version progression** through the desired last form
+4. **Current version** (V0 on create) and why it exists
 5. **Major architectural decisions**
 6. **Biggest unresolved questions**
-7. **Disagreements or concerns** about the brainstorm
-8. **Recommended first implementation task**
+7. **Disagreements or concerns** about the brainstorm or latest learnings
+8. **Recommended next implementation task**
 
 Then stop.

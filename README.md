@@ -32,7 +32,7 @@ npx skills add https://github.com/joacod/skills --skill <skill-name>
 
 | Skill | Use it to |
 | --- | --- |
-| [`project-specs`](skills/project-specs/SKILL.md) | Turn a finished brainstorm into a pre-v0 spec, version roadmap, and executable tasks. |
+| [`project-specs`](skills/project-specs/SKILL.md) | Capture the desired product, full version roadmap, and current tasks; update the spec after each step. |
 
 ## Documentation
 

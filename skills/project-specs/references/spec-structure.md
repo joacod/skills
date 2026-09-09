@@ -39,13 +39,13 @@ Create or update:
 
 | File | Role |
 | --- | --- |
-| `README.md` | Durable project brief and entry point |
+| `README.md` | Durable project brief, including desired last form |
 | `STATUS.md` | Short mutable checkpoint for the next session |
 | `01-context-and-research.md` | Origin, repo context, external references |
-| `02-product-and-experience.md` | Intended experience, independent of implementation |
+| `02-product-and-experience.md` | Mature product/experience, independent of implementation |
 | `03-architecture.md` | Components and boundaries with confidence labels |
-| `04-version-roadmap.md` | Sequence of meaningful implementations |
-| `05-implementation-tasks.md` | Near-term executable tasks |
+| `04-version-roadmap.md` | Full sequence from first version through desired last form |
+| `05-implementation-tasks.md` | Executable tasks for the current near-term version |
 | `06-decisions-and-open-questions.md` | ADRs and unknowns, kept separate |
 | `07-agent-handoff.md` | Compact entry for future coding agents |
 
@@ -66,7 +66,8 @@ Use these labels in architecture, decisions, and other claims where useful:
 ## README.md
 
 Durable brief. A later agent should be able to read this and `STATUS.md` and
-know what the project is.
+know what the project is, what already exists, and what the mature product is
+for.
 
 ### What we are building
 
@@ -78,8 +79,10 @@ Motivation and the opportunity or problem.
 
 ### Desired end state
 
-What the mature system should enable and feel like. Capabilities and
-experience, not implementation.
+Required. Describe the mature system: what it should enable, feel like, and
+make possible when the roadmap is done. Capabilities and experience, not a
+stack dump. This is the north star later versions move toward. Do not omit it
+or replace it with only the V0 slice.
 
 ### Core principles
 
@@ -173,12 +176,13 @@ Things not yet known, and how they could be learned.
 
 ## 02-product-and-experience.md
 
-Describe the intended product, creative, or developer experience independently
-from implementation.
+Describe the intended mature product, creative, or developer experience
+independently from implementation. This is the last form, not the V0 demo.
 
 ### Primary workflows
 
-What someone should actually be able to do.
+What someone should actually be able to do when the product is in its desired
+form. If a workflow is later-version only, say so rather than dropping it.
 
 ### Desired developer experience
 
@@ -288,28 +292,43 @@ Point to `STATUS.md`.
 
 ### Source of truth
 
-Which files to read depending on the task.
+Tell the agent what to read:
+
+- Current work: `STATUS.md`, the current roadmap version, and the assigned
+  task in `05-implementation-tasks.md`.
+- Product destination: `README.md` (desired end state) and
+  `02-product-and-experience.md`.
+- Why this version exists: `04-version-roadmap.md`.
+- Constraints and reuse: `03-architecture.md` and
+  `01-context-and-research.md`.
+- Open choices: `06-decisions-and-open-questions.md`.
+
+An implementing agent should not need the original brainstorm transcript.
 
 ### Rules for implementation agents
 
 1. Read `README.md`, `STATUS.md`, the relevant roadmap version, and the
    assigned task before coding.
 2. Implement only the current task or version unless a dependency genuinely
-   requires otherwise.
+   requires otherwise. Do not skip ahead to the desired last form.
 3. Prefer the simplest solution that satisfies current acceptance criteria.
 4. Reuse repository conventions and infrastructure.
 5. Do not introduce generalized abstractions based on one example.
 6. Run the required validation.
-7. Update documentation when implementation reveals an incorrect assumption.
+7. Update documentation when implementation reveals an incorrect assumption,
+   including the desired end state or later versions when they changed.
 8. Record important new architectural decisions.
 9. Preserve useful planning history rather than rewriting it so old
    predictions look correct.
 10. Leave the repository working after each task.
-11. Update `STATUS.md` after meaningful progress.
+11. Update `STATUS.md` after meaningful progress. After a version lands, the
+    spec should be refreshed so the next incomplete version is the new
+    near-term work.
 
 ### How to continue
 
-How to identify the next incomplete task.
+How to identify the next incomplete task, and when to re-invoke this skill to
+expand the next version into tasks instead of inventing them during coding.
 
 ### Completion report
 
@@ -326,10 +345,16 @@ Future coding agents should report:
 
 ## Updating an existing package
 
+Use this after a version, task, or experiment lands, not only when the original
+brainstorm is restated.
+
 1. Read the existing documentation first.
 2. Inspect the current implementation.
 3. Reconcile documentation with reality.
 4. Preserve useful completed history.
-5. Update `STATUS.md`.
-6. Revise future roadmap assumptions when necessary.
+5. Update `STATUS.md`: current state, version, task, learnings, assumption
+   changes, next work, and date.
+6. Follow [task-design.md](task-design.md) update behavior. If the destination
+   changed, update `README.md`, `02-product-and-experience.md`, and the last
+   roadmap version together.
 7. Do not recast completed versions as if the new plan had always existed.

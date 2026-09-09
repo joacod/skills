@@ -1,4 +1,4 @@
 interface:
   display_name: "Project Specs"
-  short_description: "Turn a finished brainstorm into a pre-v0 spec, roadmap, and V0 tasks."
-  default_prompt: "Use $project-specs to turn this brainstorm into a durable project spec and V0 tasks, then stop before building."
+  short_description: "Turn a brainstorm into a living product spec, full roadmap, and current-version tasks."
+  default_prompt: "Use $project-specs to capture the desired end state, full version roadmap, and current implementation tasks, then stop before building."

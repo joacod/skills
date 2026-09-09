@@ -4,28 +4,31 @@
     {
       "id": 1,
       "prompt": "We've been brainstorming a local-first WebAudio instrument studio in this repo. There are already some experiments under packages/audio-scratch and we liked bits of Tone.js and Strudel but don't want to wrap either. Turn this brainstorm into a project spec, version roadmap, and V0 tasks so another agent can implement it incrementally. Do not start building.",
-      "expected_output": "A new docs/<project-slug>/ package that captures the brief, research catalog, labeled architecture, a small learning-oriented V0, executable V0 tasks with repository paths, and a concise stop-before-build summary.",
+      "expected_output": "A new docs/<project-slug>/ package that captures the desired last form, research catalog, labeled architecture, a full version roadmap to that destination, executable V0 tasks with repository paths, and a concise stop-before-build summary.",
       "files": [],
       "expectations": [
         "Documentation is written under a project-specific directory rather than a single global spec file.",
         "The package includes a durable README, STATUS, context/research, product/experience, architecture, roadmap, near-term tasks, decisions/questions, and agent handoff unless a file is honestly omitted.",
+        "README desired end state and the product/experience doc describe the mature product, not only V0.",
+        "The version roadmap runs from V0 through the desired last form; later versions are directional but present.",
         "Existing repository experiments and mentioned external references are preserved with concrete paths or URLs.",
         "Architecture claims are labeled by confidence and premature abstractions are called out.",
-        "V0 is a small observable experiment, not a miniature of every final feature, and is decomposed into focused tasks.",
+        "V0 is a small observable experiment, not a miniature of every final feature, and is decomposed into focused tasks an agent can execute without the original brainstorm.",
         "No production implementation, scaffold, or V0 code is started."
       ]
     },
     {
       "id": 2,
       "prompt": "We already have docs/story-studio/ from an earlier planning pass, but the repo now has a working V0 prototype that disproved the scene-graph assumption. Reconcile the project spec with reality, update STATUS and the roadmap, and keep the completed V0 history instead of rewriting it as if the new plan had always existed.",
-      "expected_output": "An update to the existing package that treats implementation reality as authoritative, preserves completed history, records the disproved assumption, and revises only incomplete future work.",
+      "expected_output": "An update to the existing package that treats implementation reality as authoritative, preserves completed history, records the disproved assumption, revises later roadmap versions, and task-splits the new current version.",
       "files": [],
       "expectations": [
         "The existing docs/story-studio/ package is updated rather than duplicated under a new slug.",
         "STATUS.md reflects the current prototype and is dated.",
         "Completed V0 work remains visible and is not recast as the new architecture.",
         "The disproved scene-graph assumption is recorded as a learning or decision change.",
-        "Only incomplete near-term tasks and future versions are rewritten as needed.",
+        "The desired end state is kept or explicitly revised rather than silently dropped.",
+        "Later roadmap versions are revised from the V0 learning, and the next incomplete version is task-split.",
         "The agent does not implement the next version while reconciling the docs."
       ]
     },
@@ -36,7 +39,7 @@
       "files": [],
       "expectations": [
         "The spec package is created or updated before any implementation discussion in the final reply.",
-        "The final response includes interpretation, documentation path, version progression, chosen V0, decisions, open questions, concerns, and the recommended first task.",
+        "The final response includes interpretation, documentation path, version progression through the desired last form, current version, decisions, open questions, concerns, and the recommended next task.",
         "The agent explicitly stops before coding, scaffolding, or applying V0-T01.",
         "V0-T01 is written with objective acceptance criteria and likely files so a later agent can take it."
       ]
