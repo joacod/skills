@@ -28,6 +28,12 @@ npx skills add https://github.com/joacod/skills --skill <skill-name>
 | [`business-idea-validator`](skills/business-idea-validator/SKILL.md) | Pressure-test business ideas with evidence and practical experiments. |
 | [`open-source-project-validator`](skills/open-source-project-validator/SKILL.md) | Evaluate open-source ideas for utility, adoption, and maintainability. |
 
+## Planning
+
+| Skill | Use it to |
+| --- | --- |
+| [`project-specs`](skills/project-specs/SKILL.md) | Turn a finished brainstorm into a pre-v0 spec, version roadmap, and executable tasks. |
+
 ## Documentation
 
 | Skill | Use it to |
