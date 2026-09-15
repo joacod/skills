@@ -24,8 +24,8 @@ When the harness expands the command, it supplies the invocation arguments
 alongside this skill. Treat those supplied arguments as the ticket and
 proceed—do not require the original command text to still be present.
 
-Do not infer invocation from intent or wording. If this skill was not explicitly
-invoked, do not create or modify branches, commits, pushes, or pull requests.
+Do not infer invocation from ordinary task wording. Without explicit invocation,
+do not apply this workflow; follow the user's request through the active harness.
 
 Keep this skill active for that ticket only until its pull request is created.
 
@@ -34,9 +34,11 @@ Keep this skill active for that ticket only until its pull request is created.
 Before changing ticket-related files, inspect the current branch and the
 repository's default branch.
 
-- If the current branch is the default branch, create a new ticket branch from
+- Honor any branch base already specified by the user for this ticket. Use it
+  without asking again, including when it differs from the current branch.
+- Otherwise, if the current branch is the default branch, create a new ticket branch from
   it and continue.
-- If the current branch is not the default branch, ask exactly: "Should the new
+- If no base was specified and the current branch is not the default branch, ask: "Should the new
   ticket branch be based on the current branch or the repository's default
   branch?" Do not switch away from or rewrite the existing branch until the user
   answers. Use the selected branch as the new branch's base and as the pull
@@ -64,9 +66,11 @@ only ticket changes and leave unrelated pre-existing changes out of the commits.
 After the harness completes the ticket, ensure all intended changes are
 committed, push the ticket branch, and create the pull request with `gh`. Use an
 existing repository pull-request template when one clearly applies. Otherwise,
-use a concise title and description focused only on the resulting behavior and
-meaningful implementation details; do not add sections for validation, tests,
-review, agent activity, plans, commit plans, or workflow metadata.
+use a concise title and description focused on the resulting behavior,
+meaningful implementation details, and relevant validation evidence or limits.
+Include a short validation section when it helps the reviewer assess the change;
+report only checks actually performed. Omit agent activity, plans, commit plans,
+and workflow metadata.
 
 Never merge, enable auto-merge, monitor CI, or clean up the branch. After the pull
 request is successfully created, report its URL and stop.
