@@ -15,6 +15,7 @@ npx skills add https://github.com/joacod/skills --skill <skill-name>
 | Skill | Use it to |
 | --- | --- |
 | [`secure-node-typescript`](skills/secure-node-typescript/SKILL.md) | Build and review secure Node.js and TypeScript applications. |
+| [`safe-pnpm-updater`](skills/safe-pnpm-updater/SKILL.md) | Update pnpm dependencies through Socket Firewall, release-age checks, and compatibility review. |
 | [`refactor-design-patterns`](skills/refactor-design-patterns/SKILL.md) | Decide when a design pattern helps and refactor toward it incrementally. |
 | [`dx-first`](skills/dx-first/SKILL.md) | Audit, improve, and protect developer experience across software repositories. |
 | [`test-health`](skills/test-health/SKILL.md) | Assess testing health and choose the smallest high-value next improvement. |

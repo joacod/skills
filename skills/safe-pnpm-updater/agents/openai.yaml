@@ -1,0 +1,4 @@
+interface:
+  display_name: "Safe pnpm Updater"
+  short_description: "Update pnpm dependencies with supply-chain safeguards."
+  default_prompt: "Use $safe-pnpm-updater to review and update this project's dependencies through Socket Firewall and release-age checks."
