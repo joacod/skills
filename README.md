@@ -53,4 +53,4 @@ npx skills add https://github.com/joacod/skills --skill <skill-name>
 
 | Skill | Use it to |
 | --- | --- |
-| [`ticket-to-pr`](skills/ticket-to-pr/SKILL.md) | Run the explicit `/ticket-to-pr <ticket>` flow: branch, sensible commits, push, and pull request. |
+| [`ticket-to-pr`](skills/ticket-to-pr/SKILL.md) | On a bare explicit invocation, ship the current work: new branch and pull request from the default branch, or commit, push, and update the pull request on any other branch. Text after the command overrides that default. |
