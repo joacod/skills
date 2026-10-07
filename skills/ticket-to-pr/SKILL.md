@@ -1,12 +1,12 @@
 ---
 name: ticket-to-pr
 description: >
-  Explicit-only workflow for turning one coding ticket into a reviewable GitHub
-  pull request: create a ticket branch, implement the work, make sensible
-  commits, push the branch, and open the pull request with `gh`. Invoke this
-  skill through your agent harness's native skill-command mechanism, passing the
-  ticket as its arguments. Do not use it for ordinary coding, branch, commit,
-  push, or pull-request requests without explicit invocation.
+  Explicit manual invocation only. With no other text, ship the current work:
+  on the default branch, create a branch from the related uncommitted changes
+  and open a pull request; on any other branch, commit, push, and update that
+  branch's pull request so its title and body cover the whole branch. Text
+  after the invocation overrides that default. Do not run this workflow unless
+  the user invoked the skill.
 user-invocable: true
 disable-model-invocation: true
 ---
@@ -15,64 +15,91 @@ disable-model-invocation: true
 
 ## Activation
 
-This is an explicit, opt-in workflow. Invoke `ticket-to-pr` through the
-harness's native skill-command mechanism and pass one ticket as its arguments.
-Skill command syntax is host-specific; this skill does not assume or define a
-portable slash or sigil prefix.
+A manual invocation through the harness's native skill-command mechanism is a
+complete request. Skill command syntax is host-specific. This skill does not
+define a portable slash or sigil prefix. When a harness drops the command text
+and supplies only this skill, that is a bare invocation.
 
-When the harness expands the command, it supplies the invocation arguments
-alongside this skill. Treat those supplied arguments as the ticket and
-proceed—do not require the original command text to still be present.
+Use the bare-invocation procedure only when the invocation has no other text.
+Text after the invocation is an explicit request and takes precedence. Follow
+it for what to change, which changes to include, the branch, the base, and the
+pull request. Use the bare procedure only for a choice that text leaves open.
+A label with no direction, such as a ticket name, leaves those choices open
+and becomes the summary.
 
-Do not infer invocation from ordinary task wording. Without explicit invocation,
-do not apply this workflow; follow the user's request through the active harness.
+Apply this workflow only when the user invoked the skill. Finish in this turn,
+then stop. On success, the last thing you report is the pull request URL.
 
-Keep this skill active for that ticket only until its pull request is created.
+## Inspect
 
-## Branch
+Before editing files, determine the current branch, the repository default
+branch, uncommitted and untracked changes, commits on this branch that are not
+on the default branch, and whether an open pull request already exists
+(`gh pr view`).
 
-Before changing ticket-related files, inspect the current branch and the
-repository's default branch.
+## Bare invocation
 
-- Honor any branch base already specified by the user for this ticket. Use it
-  without asking again, including when it differs from the current branch.
-- Otherwise, if the current branch is the default branch, create a new ticket branch from
-  it and continue.
-- If no base was specified and the current branch is not the default branch, ask: "Should the new
-  ticket branch be based on the current branch or the repository's default
-  branch?" Do not switch away from or rewrite the existing branch until the user
-  answers. Use the selected branch as the new branch's base and as the pull
-  request's base.
-- Honor an explicitly requested branch name. Otherwise, follow an explicitly
-  documented repository naming convention. If none exists, use
-  `<type>/<short-kebab-case-description>`, choosing a type such as `feat`, `fix`,
-  `docs`, `refactor`, `test`, or `chore` that matches the ticket, for example
-  `feat/csv-export` or `fix/stale-session-recovery`. Do not add an agent-name
-  prefix unless the user requests it.
+The sections below apply when the invocation has no other text.
 
-## Implement and commit
+### Default branch
 
-After creating the branch, let the active harness implement the ticket normally.
-Do not add a separate planning, architecture, testing, validation, review,
-subagent, orchestration, or workflow-state layer.
+When the current branch is the default branch, create a new branch from it.
+Creating the branch keeps the working tree.
 
-Commit coherent completed parts when they make the history easier to understand.
-A small cohesive task normally gets one commit; use multiple commits only for
-meaningful independent slices. Keep tightly coupled implementation and tests
-together. Follow repository commit conventions when they exist; otherwise use a
-short imperative subject without an essay-like body or process narration. Stage
-only ticket changes and leave unrelated pre-existing changes out of the commits.
+Name it from a documented repository convention. Otherwise use
+`<type>/<short-kebab-case-description>` with a type such as
+`feat`, `fix`, `docs`, `refactor`, `test`, or `chore`, for example
+`feat/csv-export`. Add an agent-name prefix only when the user asks for one.
+
+Commit the uncommitted changes that belong to this work, including related
+untracked files. Leave unrelated dirty paths unstaged and list them. Derive
+the summary from the diff.
+
+When the default branch is clean, report that there is nothing to ship and
+stop.
+
+### Any other branch
+
+Stay on the current branch. Commit its uncommitted and untracked changes. The
+pull request covers every change on this branch relative to its base, including
+commits already on the branch.
+
+A clean branch with an open pull request needs no empty commit. Push when the
+remote is behind, and update the pull request when its title or body does not
+cover the branch.
+
+## With other text
+
+Follow the invocation text. Implement work it asks for, on the branch and base
+it names, and include only the changes it scopes. Add no separate planning,
+architecture, review, subagent, or workflow-state layer.
+
+Then commit, push, and create or update the pull request. Where the text is
+silent, use the bare-invocation procedure for that choice.
+
+## Commits
+
+Use one commit for a small cohesive change. Split only independent slices, and
+keep coupled implementation and tests together. Follow a repository commit
+convention when one exists; otherwise use a short imperative subject. Leave
+secrets such as `.env` files and credentials unstaged and name them.
 
 ## Push and pull request
 
-After the harness completes the ticket, ensure all intended changes are
-committed, push the ticket branch, and create the pull request with `gh`. Use an
-existing repository pull-request template when one clearly applies. Otherwise,
-use a concise title and description focused on the resulting behavior,
-meaningful implementation details, and relevant validation evidence or limits.
-Include a short validation section when it helps the reviewer assess the change;
-report only checks actually performed. Omit agent activity, plans, commit plans,
-and workflow metadata.
+Push without force and without rewriting history.
 
-Never merge, enable auto-merge, monitor CI, or clean up the branch. After the pull
-request is successfully created, report its URL and stop.
+When `gh pr view` finds an open pull request, update its title and body with
+`gh pr edit`. Otherwise create one with `gh`. On a new branch from the default
+branch, the pull request base is the default branch unless this invocation
+named another base. On any other branch, leave the existing pull request base
+unchanged.
+
+Use a repository pull-request template when one clearly applies. Otherwise
+write a concise title and body: resulting behavior, meaningful implementation
+details, and validation that was actually run. Keep a ticket identifier that
+was supplied in the invocation or already present on the pull request.
+
+Never merge, enable auto-merge, monitor CI, or delete the branch.
+
+When `gh` authentication, a merge conflict, or detached `HEAD` blocks the run,
+report the current branch and any paths still uncommitted, then stop.
