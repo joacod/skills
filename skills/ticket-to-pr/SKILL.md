@@ -43,10 +43,12 @@ repository's default branch.
   branch?" Do not switch away from or rewrite the existing branch until the user
   answers. Use the selected branch as the new branch's base and as the pull
   request's base.
-- Choose a short, descriptive branch name. Use a type that matches the work and
-  follow a clear repository convention when one exists; otherwise use a concise
-  kebab-case description, such as `feat/csv-export` or
-  `fix/stale-session-recovery`.
+- Honor an explicitly requested branch name. Otherwise, follow an explicitly
+  documented repository naming convention. If none exists, use
+  `<type>/<short-kebab-case-description>`, choosing a type such as `feat`, `fix`,
+  `docs`, `refactor`, `test`, or `chore` that matches the ticket, for example
+  `feat/csv-export` or `fix/stale-session-recovery`. Do not add an agent-name
+  prefix unless the user requests it.
 
 ## Implement and commit
 
