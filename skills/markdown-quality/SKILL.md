@@ -1,16 +1,19 @@
 ---
 name: markdown-quality
 description: >
-  Review, improve, or create repository Markdown across README files, docs,
-  guides, API references, ADRs, changelogs, contributor files, templates, and
-  agent-facing instructions. Use this whenever a user asks to clean up,
-  standardize, format, audit, or improve one or more .md files, Markdown
-  consistency, links, headings, examples, accessibility, or documentation
-  quality across a repository. Infer each document's role, audience, renderer,
-  dialect, and maintenance status before editing; use Markdown features when
-  they improve comprehension without inventing content or causing renderer
-  incompatibility. For a main README-only onboarding task, use readme-first
-  instead; use this skill for non-README Markdown or repo-wide work.
+  Slash command only. Review, improve, or create repository Markdown across
+  README files, docs, guides, API references, ADRs, changelogs, contributor
+  files, templates, and agent-facing instructions when this command is invoked
+  to clean up, standardize, format, audit, or improve one or more .md files,
+  Markdown consistency, links, headings, examples, accessibility, or
+  documentation quality across a repository. Infer each document's role,
+  audience, renderer, dialect, and maintenance status before editing; use
+  Markdown features when they improve comprehension without inventing content
+  or causing renderer incompatibility. For a main README-only onboarding task,
+  use readme-first instead; use this skill for non-README Markdown or
+  repo-wide work.
+user-invocable: true
+disable-model-invocation: true
 ---
 
 # Markdown Quality

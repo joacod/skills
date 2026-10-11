@@ -1,13 +1,15 @@
 ---
 name: readme-first
 description: >
-  Create, improve, simplify, rewrite, or review a software repository's main
-  user-facing README.md. Use this whenever a user asks for a README from an
-  existing codebase, faster onboarding, clearer README structure or developer
-  experience, a 60-second quick start, or a fix for stale or inaccurate README
-  instructions. Focus on the repository front door, not arbitrary Markdown,
-  architecture or API documentation, contributor guides, branding, or landing
-  pages.
+  Slash command only. Create, improve, simplify, rewrite, or review a software
+  repository's main user-facing README.md when this command is invoked for a
+  README from an existing codebase, faster onboarding, clearer README structure
+  or developer experience, a 60-second quick start, or a fix for stale or
+  inaccurate README instructions. Focus on the repository front door, not
+  arbitrary Markdown, architecture or API documentation, contributor guides,
+  branding, or landing pages.
+user-invocable: true
+disable-model-invocation: true
 ---
 
 # README First

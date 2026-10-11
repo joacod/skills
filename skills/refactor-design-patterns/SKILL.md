@@ -1,6 +1,8 @@
 ---
 name: refactor-design-patterns
-description: Review existing code or architecture and decide whether a specific design pattern would improve it without overengineering. Use this whenever the user is asking whether a pattern is justified, comparing nearby patterns like Strategy vs State or Adapter vs Facade vs Proxy, or refactoring code with recurring branching, growing state logic, hard-to-extend construction, or inconsistent wrappers. Do not use this for broad system design unless the core question is pattern fit, refactoring shape, or whether a simpler non-pattern refactor is better.
+description: Slash command only. Review existing code or architecture and decide whether a specific design pattern would improve it without overengineering when this command is invoked to judge whether a pattern is justified, compare nearby patterns like Strategy vs State or Adapter vs Facade vs Proxy, or refactor code with recurring branching, growing state logic, hard-to-extend construction, or inconsistent wrappers. Do not use this for broad system design unless the core question is pattern fit, refactoring shape, or whether a simpler non-pattern refactor is better.
+user-invocable: true
+disable-model-invocation: true
 ---
 
 # Refactor Design Patterns
