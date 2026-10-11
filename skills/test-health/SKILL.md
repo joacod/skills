@@ -1,14 +1,17 @@
 ---
 name: test-health
 description: >
-  Audit a repository's automated testing health and recommend a bounded,
-  high-value next improvement slice. Use when assessing an existing test suite,
-  introducing tests into an untested or legacy project, deciding what to test
-  next, evaluating testing strategy or coverage, choosing between unit,
-  integration, and end-to-end tests, investigating brittle or flaky tests, or
-  determining whether a small architecture change is needed for testability.
-  Detect and prefer the repository's existing stack and conventions. Improve
-  testing incrementally rather than pursuing arbitrary coverage targets.
+  Slash command only. Audit a repository's automated testing health and
+  recommend a bounded, high-value next improvement slice when this command is
+  invoked to assess an existing test suite, introduce tests into an untested
+  or legacy project, decide what to test next, evaluate testing strategy or
+  coverage, choose between unit, integration, and end-to-end tests, investigate
+  brittle or flaky tests, or determine whether a small architecture change is
+  needed for testability. Detect and prefer the repository's existing stack
+  and conventions. Improve testing incrementally rather than pursuing arbitrary
+  coverage targets.
+user-invocable: true
+disable-model-invocation: true
 ---
 
 # Test health
